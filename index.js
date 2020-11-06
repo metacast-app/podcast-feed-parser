@@ -508,7 +508,6 @@ function createEpisodesObjectFromFeed (channel, options) {
     options.fields.episodes.forEach( (field) => {
       const obj = {}
       var uncleaned = false
-
       if (options.uncleaned && options.uncleaned.episodes) {
         var uncleaned = (options.uncleaned.episodes.indexOf(field) >= 0)
       }
