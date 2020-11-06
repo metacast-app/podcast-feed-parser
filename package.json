@@ -1,5 +1,5 @@
 {
-  "name": "podcast-feed-parser",
+  "name": "@podverse/podcast-feed-parser",
   "version": "1.0.1",
   "description": "A highly customizable package for fetching and parsing podcast feeds into simple and manageable JavaScript objects. For use with node and in the browser.",
   "main": "index.js",
@@ -7,9 +7,9 @@
     "test": "mocha"
   },
   "repository": {
-      "type": "git",
-      "url": "https://github.com/jbierfeldt/podcast-feed-parser.git"
-    },
+    "type": "git",
+    "url": "https://github.com/podverse/podcast-feed-parser.git"
+  },
   "keywords": [
     "javascript",
     "podcast",
@@ -22,6 +22,9 @@
     "feed"
   ],
   "author": "Jackson Bierfeldt <jbierfeldt@gmail.com> (http://bierfeldtaudio.com)",
+  "contributors": [
+    "Mitch Downey"
+  ],
   "license": "ISC",
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",

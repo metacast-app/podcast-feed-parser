@@ -14,22 +14,79 @@ const ERRORS = exports.ERRORS = {
 ============================================
 */
 
+const fieldsMeta = [
+  'title',
+  'author',
+  'blocked',
+  'categories',
+  'complete',
+  'description',
+  'docs',
+  'editor',
+  'explicit',
+  'funding',
+  'generator',
+  'guid',
+  'imageURL',
+  'keywords',
+  'language',
+  'lastUpdated',
+  'link',
+  'locked',
+  'owner',
+  'subtitle',
+  'summary',
+  'type',
+  'webMaster'
+]
+
+const fieldsEpisodes = [
+  'title',
+  'author',
+  'blocked',
+  'chapters',
+  'description',
+  'duration',
+  'enclosure',
+  'explicit',
+  'funding',
+  'guid',
+  'imageURL',
+  'keywords',
+  'language',
+  'link',
+  'order',
+  'pubDate',
+  'subtitle',
+  'summary',
+  'transcript'
+]
+
+const requiredMeta = []
+const requiredEpisodes = []
+
+const uncleanedMeta = [
+  'funding',
+  'guid'
+]
+const uncleanedEpisodes = [
+  'funding',
+  'guid',
+  'transcript'
+]
+
 const DEFAULT = exports.DEFAULT = {
   fields: {
-    meta: ['title', 'description', 'subtitle', 'imageURL', 'lastUpdated', 'link',
-            'language', 'editor', 'author', 'summary', 'categories', 'owner',
-            'explicit', 'complete', 'blocked'],
-    episodes: ['title', 'description', 'subtitle', 'imageURL', 'pubDate',
-            'link', 'language', 'enclosure', 'duration', 'summary', 'blocked',
-            'explicit', 'order']
+    meta: fieldsMeta,
+    episodes: fieldsEpisodes
   },
   required: {
-    meta: [],
-    episodes: []
+    meta: requiredMeta,
+    episodes: requiredEpisodes
   },
   uncleaned: {
-    meta: [],
-    episodes: []
+    meta: uncleanedMeta,
+    episodes: uncleanedEpisodes
   }
 }
 
@@ -41,26 +98,18 @@ function mergeDedupe(arr)
 
 const buildOptions = exports.buildOptions = function (params) {
   try {
-
-    // default options
-    // tried to accomplish this by referencing the DEFAULT object,
-    // but ran into problems with mutation when doing Object.assign(options[key], params[key])
     let options = {
       fields: {
-        meta: ['title', 'description', 'subtitle', 'imageURL', 'lastUpdated', 'link',
-                'language', 'editor', 'author', 'summary', 'categories', 'owner',
-                'explicit', 'complete', 'blocked'],
-        episodes: ['title', 'description', 'subtitle', 'imageURL', 'pubDate',
-                'link', 'language', 'enclosure', 'duration', 'summary', 'blocked',
-                'explicit', 'order']
+        meta: fieldsMeta,
+        episodes: fieldsEpisodes
       },
       required: {
-        meta: [],
-        episodes: []
+        meta: requiredMeta,
+        episodes: requiredEpisodes
       },
       uncleaned: {
-        meta: [],
-        episodes: []
+        meta: uncleanedMeta,
+        episodes: uncleanedEpisodes
       }
     }
 
@@ -103,65 +152,17 @@ const buildOptions = exports.buildOptions = function (params) {
 */
 
 const GET = exports.GET = {
-  imageURL: function (node) {
-
-    if (node.image) {
-      return node.image[0].url[0]
-    }
-
-    if (node["itunes:image"]) {
-      return node["itunes:image"][0]['$'].href
-    }
-
-    return undefined
-  },
-
-  subtitle: function (node) {
-    return node['itunes:subtitle']
-  },
-
-  lastUpdated: function (node) {
-    return node.lastBuildDate
-  },
-
-  editor: function (node) {
-    return node.managingEditor
-  },
 
   author: function (node) {
-    return node['itunes:author']
-  },
-
-  summary: function (node) {
-    return node['itunes:summary']
-  },
-
-  owner: function (node) {
-    return node['itunes:owner']
-  },
-
-  explicit: function (node) {
-    return node['itunes:explicit']
-  },
-
-  complete: function (node) {
-    return node['itunes:complete']
+    if (node.author) {
+      return node.author
+    } else if (node['itunes:author']) {
+      return node['itunes:author']
+    }
   },
 
   blocked: function (node) {
     return node['itunes:block']
-  },
-
-  order: function (node) {
-    return node['itunes:order']
-  },
-
-  guid: function (node) {
-    return node.guid[0]._
-  },
-
-  duration: function (node) {
-    return node['itunes:duration']
   },
 
   categories: function (node) {
@@ -169,7 +170,7 @@ const GET = exports.GET = {
     // grouping in lists. If there is a sub-category, it is the second element
     // of an array.
 
-    const categoriesArray = node["itunes:category"].map( item => {
+    const categoriesArray = node["itunes:category"].map(item => {
       let category = []
       category.push(item['$'].text) // primary category
       if (item['itunes:category']) { // sub-category
@@ -179,13 +180,185 @@ const GET = exports.GET = {
     })
 
     return categoriesArray
+  },
+
+  chapters: function (node) {
+    const items = getItemsWithAttrs(node['podcast:chapters'])
+    if (items && items[0]) {
+      return {
+        type: items[0].attrs.type,
+        url: items[0].attrs.url
+      }
+    }
+  },
+
+  complete: function (node) {
+    return node['itunes:complete']
+  },
+
+  duration: function (node) {
+    return node['itunes:duration']
+  },
+
+  editor: function (node) {
+    return node.managingEditor
+  },
+
+  explicit: function (node) {
+    return node['itunes:explicit']
+  },
+
+  funding: function (node) {
+    const items = getItemsWithAttrs(node['podcast:funding'])
+    const finalItems = []
+
+    for (const item of items) {
+      finalItems.push({
+        value: item.value,
+        url: item.attrs.url
+      })
+    }
+
+    return finalItems
+  },
+
+  guid: function (node) {
+    if (node.guid) {
+      if (typeof node.guid === 'string') {
+        return node.guid
+      } else if (Array.isArray(node.guid) && node.guid[0] && node.guid[0]._) {
+        return node.guid[0]._
+      }
+    }
+  },
+
+  imageURL: function (node) {
+    if (
+      node.image &&
+      node.image[0] &&
+      node.image[0].url[0]
+    ) {
+      return node.image[0].url[0]
+    }
+
+    if (
+      node["itunes:image"] &&
+      node["itunes:image"][0] &&
+      node["itunes:image"][0]['$'] &&
+      node["itunes:image"][0]['$'].href
+    ) {
+      return node["itunes:image"][0]['$'].href
+    }
+
+    if (typeof node["itunes:image"] === 'string') {
+      return node["itunes:image"]
+    }
+
+    return undefined
+  },
+
+  /*
+    NOTE: Phase 2 - not formalized yet
+    images: function (node) {
+      const item = getItemsWithAttrs(node['podcast:images'])
+      if (item[0]) {
+        const srcset = item.attrs.srcset
+        const srcSetArray = convertCommaDelimitedStringToArray(srcset)
+        const parsedSrcSet = []
+        for (let str of srcSetArray) {
+          str = str.trim()
+          const srcSetAttrs = str.split(' ')
+          if (srcSetAttrs.length === 2) {
+            parsedSrcSet.push({
+              url: srcSetAttrs[0],
+              width: srcSetAttrs[1]
+            })
+          }
+        }
+
+        return {
+          srcset: parsedSrcSet
+        }
+      }
+    },
+  */
+
+  keywords: function (node) {
+    return node['itunes:keywords']
+  },
+  
+  lastUpdated: function (node) {
+    return node.lastBuildDate
+  },
+
+  /*
+    NOTE: Phase 2 - not formalized yet
+
+    location: function (node) {
+      const item = getItemsWithAttrs(node['podcast:location'])
+      if (item) {
+        return {
+          value: item.value,
+          latlon: item.attrs.latlon,
+          osmid: item.attrs.osmid
+        }
+      }
+    },
+  */
+
+  locked: function (node) {
+    const items = getItemsWithAttrs(node['podcast:locked'])
+    if (items[0]) {
+      return {
+        value: items[0].value,
+        owner: items[0].attrs.owner
+      }
+    }
+  },
+
+  order: function (node) {
+    return node['itunes:order']
+  },
+
+  owner: function (node) {
+    return node['itunes:owner']
+  },
+
+  subtitle: function (node) {
+    return node['itunes:subtitle']
+  },
+
+  summary: function (node) {
+    return node['itunes:summary']
+  },
+
+  transcript: function (node) {
+    const items = getItemsWithAttrs(node['podcast:transcript'])
+    const finalItems = []
+    
+    if (Array.isArray(items)) {
+      for (const item of items) {
+        const { language, rel, type, url } = item.attrs
+        finalItems.push({
+          language,
+          rel,
+          type,
+          url
+        })
+      }
+    }
+
+    return finalItems
+  },
+
+  type: function (node) {
+    return node['itunes:type']
   }
 }
 
 const getDefault = exports.getDefault = function (node, field) {
   return (node[field]) ? node[field] : undefined
 }
-
 
 /*
 =======================
@@ -194,6 +367,38 @@ const getDefault = exports.getDefault = function (node, field) {
 */
 
 const CLEAN = exports.CLEAN = {
+  author: function (obj) {
+    return obj
+  },
+
+  blocked: function (string) {
+    if (string.toLowerCase == 'yes') {
+      return true
+    } else {
+      return false
+    }
+  },
+
+  complete: function (string) {
+    if (string[0].toLowerCase == 'yes') {
+      return true
+    } else {
+      return false
+    }
+  },
+
+  duration: function (string) {
+    // gives duration in seconds
+    let times = string[0].split(':'),
+      sum = 0, mul = 1
+
+    while (times.length > 0) {
+      sum += mul * parseInt(times.pop())
+      mul *= 60
+    }
+
+    return sum
+  },
 
   enclosure: function (object) {
     return {
@@ -203,17 +408,23 @@ const CLEAN = exports.CLEAN = {
     }
   },
 
-  duration: function (string) {
-    // gives duration in seconds
-    let times = string[0].split(':'),
-    sum = 0, mul = 1
-
-    while (times.length > 0) {
-      sum += mul * parseInt(times.pop())
-      mul *= 60
+  explicit: function (string) {
+    if (['yes', 'explicit', 'true'].indexOf(string[0].toLowerCase()) >= 0) {
+      return true
+    } else if (['clean', 'no', 'false'].indexOf(string[0].toLowerCase()) >= 0) {
+      return false
+    } else {
+      return undefined
     }
+  },
 
-    return sum
+  imageURL: function (string) {
+    return string
+  },
+
+
+  lastUpdated: function (string) {
+    return new Date(string).toISOString()
   },
 
   owner: function (object) {
@@ -230,44 +441,9 @@ const CLEAN = exports.CLEAN = {
     return ownerObject
   },
 
-  lastUpdated: function (string) {
-    return new Date(string).toISOString()
-  },
-
   pubDate: function (string) {
     return new Date(string).toISOString()
-  },
-
-  complete: function (string) {
-    if (string[0].toLowerCase == 'yes') {
-      return true
-    } else {
-      return false
-    }
-  },
-
-  blocked: function (string) {
-    if (string.toLowerCase == 'yes') {
-      return true
-    } else {
-      return false
-    }
-  },
-
-  explicit: function (string) {
-    if (['yes', 'explicit', 'true'].indexOf(string[0].toLowerCase()) >= 0) {
-      return true
-    } else if (['clean', 'no', 'false'].indexOf(string[0].toLowerCase()) >= 0) {
-      return false
-    } else {
-      return undefined
-    }
-  },
-
-  imageURL: function (string) {
-    return string
   }
-
 }
 
 const cleanDefault = exports.cleanDefault = function (node) {
@@ -443,10 +619,6 @@ const getPodcastFromURL = exports.getPodcastFromURL = async function (url, param
     const feedResponse = await fetchFeed(url)
     const channel = feedResponse.rss.channel[0]
 
-    if (channel["itunes:new-feed-url"]) {
-      return await getPodcastFromURL(channel["itunes:new-feed-url"][0], params)
-    }
-
     const meta = createMetaObjectFromFeed(channel, options)
     const episodes = createEpisodesObjectFromFeed(channel, options)
 
@@ -464,10 +636,6 @@ const getPodcastFromFeed = exports.getPodcastFromFeed = function (feed, params) 
     const feedObject = parseXMLFeed(feed)
     const channel = feedObject.rss.channel[0]
 
-    if (channel["itunes:new-feed-url"]) {
-      console.warn("\nWarning: Feed includes \<itunes:new-feed-url\> element, which indicates that the feed being parsed may be outdated.\n")
-    }
-
     const meta = createMetaObjectFromFeed(channel, options)
     const episodes = createEpisodesObjectFromFeed(channel, options)
 
@@ -476,4 +644,40 @@ const getPodcastFromFeed = exports.getPodcastFromFeed = function (feed, params) 
   catch (err) {
     throw err
   }
+}
+
+/*
+=======================
+=== HELPER FUNCTIONS ===
+=======================
+*/
+
+const getItemsWithAttrs = (val) => {
+  if (Array.isArray(val)) {
+    const items = []
+
+    for (const item of val) {
+      if (typeof item === 'string') {
+        items.push({
+          value: item,
+          attrs: {}
+        })
+      } else if (item) {
+        items.push({
+          value: item._,
+          attrs: item['$'] ? item['$'] : {}
+        })
+      }
+    }
+
+    return items
+  }
+
+  return []
+}
+
+const convertCommaDelimitedStringToArray = (str) => {
+  str = str.replace(/(\r\n|\n|\r)/gm, '')
+  str = str.split(',')
+  return str
 }
