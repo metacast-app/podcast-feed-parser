@@ -30,9 +30,10 @@ const fieldsMeta = [
   'imageURL',
   'keywords',
   'language',
-  'lastUpdated',
+  'lastBuildDate',
   'link',
   'locked',
+  'pubDate',
   'owner',
   'subtitle',
   'summary',
@@ -171,10 +172,10 @@ const GET = exports.GET = {
     // of an array.
 
     const categoriesArray = node["itunes:category"].map(item => {
-      let category = []
-      category.push(item['$'].text) // primary category
+      let category = ''
+      category += item['$'].text // primary category
       if (item['itunes:category']) { // sub-category
-        category.push(item['itunes:category'][0]['$'].text)
+        category += '>' + item['itunes:category'][0]['$'].text
       }
       return category
     })
@@ -285,10 +286,6 @@ const GET = exports.GET = {
 
   keywords: function (node) {
     return node['itunes:keywords']
-  },
-  
-  lastUpdated: function (node) {
-    return node.lastBuildDate
   },
 
   /*
@@ -422,11 +419,6 @@ const CLEAN = exports.CLEAN = {
     return string
   },
 
-
-  lastUpdated: function (string) {
-    return new Date(string).toISOString()
-  },
-
   owner: function (object) {
     let ownerObject = {}
 
@@ -439,10 +431,6 @@ const CLEAN = exports.CLEAN = {
     }
 
     return ownerObject
-  },
-
-  pubDate: function (string) {
-    return new Date(string).toISOString()
   }
 }
 
