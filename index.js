@@ -260,6 +260,7 @@ const GET = exports.GET = {
 
   /*
     NOTE: Phase 2 - not formalized yet
+
     images: function (node) {
       const item = getItemsWithAttrs(node['podcast:images'])
       if (item[0]) {
