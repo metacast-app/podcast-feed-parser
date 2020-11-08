@@ -10,6 +10,35 @@ const ERRORS = exports.ERRORS = {
 
 /*
 ============================================
+=== CONSTANTS ===
+============================================
+*/
+const NS = rssFeedNamespaces = {
+  itunesAuthor: 'itunes:author',
+  itunesBlock: 'itunes:block',
+  itunesCategory: 'itunes:category',
+  itunesComplete: 'itunes:complete',
+  itunesDuration: 'itunes:duration',
+  itunesEmail: 'itunes:email',
+  itunesExplicit: 'itunes:explicit',
+  itunesImage: 'itunes:image',
+  itunesKeywords: 'itunes:keywords',
+  itunesName: 'itunes:name',
+  itunesOrder: 'itunes:order',
+  itunesOwner: 'itunes:owner',
+  itunesSubtitle: 'itunes:subtitle',
+  itunesSummary: 'itunes:summary',
+  itunesType: 'itunes:type',
+  podcastChapters: 'podcast:chapters',
+  podcastFunding: 'podcast:funding',
+  podcastLocked: 'podcast:locked',
+  podcastTranscript: 'podcast:transcript',
+  podcastValue: 'podcast:value',
+  podcastValueRecipient: 'podcast:valueRecipient'
+}
+
+/*
+============================================
 === DEFAULT OPTIONS and OPTIONS BUILDING ===
 ============================================
 */
@@ -38,6 +67,7 @@ const fieldsMeta = [
   'subtitle',
   'summary',
   'type',
+  'value',
   'webMaster'
 ]
 
@@ -157,13 +187,13 @@ const GET = exports.GET = {
   author: function (node) {
     if (node.author) {
       return node.author
-    } else if (node['itunes:author']) {
-      return node['itunes:author']
+    } else if (node[NS.itunesAuthor]) {
+      return node[NS.itunesAuthor]
     }
   },
 
   blocked: function (node) {
-    return node['itunes:block']
+    return node[NS.itunesBlock]
   },
 
   categories: function (node) {
@@ -174,8 +204,8 @@ const GET = exports.GET = {
     const categoriesArray = node["itunes:category"].map(item => {
       let category = ''
       category += item['$'].text // primary category
-      if (item['itunes:category']) { // sub-category
-        category += '>' + item['itunes:category'][0]['$'].text
+      if (item[NS.itunesCategory]) { // sub-category
+        category += '>' + item[NS.itunesCategory][0]['$'].text
       }
       return category
     })
@@ -184,7 +214,7 @@ const GET = exports.GET = {
   },
 
   chapters: function (node) {
-    const items = getItemsWithAttrs(node['podcast:chapters'])
+    const items = getItemsWithAttrs(node[NS.podcastChapters])
     if (items && items[0]) {
       return {
         type: items[0].attrs.type,
@@ -194,11 +224,11 @@ const GET = exports.GET = {
   },
 
   complete: function (node) {
-    return node['itunes:complete']
+    return node[NS.itunesComplete]
   },
 
   duration: function (node) {
-    return node['itunes:duration']
+    return node[NS.itunesDuraton]
   },
 
   editor: function (node) {
@@ -206,11 +236,11 @@ const GET = exports.GET = {
   },
 
   explicit: function (node) {
-    return node['itunes:explicit']
+    return node[NS.itunesExplicit]
   },
 
   funding: function (node) {
-    const items = getItemsWithAttrs(node['podcast:funding'])
+    const items = getItemsWithAttrs(node[NS.podcastFunding])
     const finalItems = []
 
     for (const item of items) {
@@ -259,7 +289,11 @@ const GET = exports.GET = {
   },
 
   /*
-    NOTE: Phase 2 - not formalized yet
+    NOTE: This is part of the Podcast Index namespace spec.
+    This is a Phase 2 namespace and has not been formalized at this time.
+    https://github.com/Podcastindex-org/podcast-namespace/tree/7c9516937e74b8058d7d49e2b389c7c361cc6a48
+
+    ---
 
     images: function (node) {
       const item = getItemsWithAttrs(node['podcast:images'])
@@ -286,11 +320,15 @@ const GET = exports.GET = {
   */
 
   keywords: function (node) {
-    return node['itunes:keywords']
+    return node[NS.itunesKeywords]
   },
 
   /*
-    NOTE: Phase 2 - not formalized yet
+    NOTE: This is part of the Podcast Index namespace spec.
+    This is a Phase 2 namespace and has not been formalized at this time.
+    https://github.com/Podcastindex-org/podcast-namespace/tree/7c9516937e74b8058d7d49e2b389c7c361cc6a48
+
+    ---
 
     location: function (node) {
       const item = getItemsWithAttrs(node['podcast:location'])
@@ -305,7 +343,7 @@ const GET = exports.GET = {
   */
 
   locked: function (node) {
-    const items = getItemsWithAttrs(node['podcast:locked'])
+    const items = getItemsWithAttrs(node[NS.podcastLocked])
     if (items[0]) {
       return {
         value: items[0].value,
@@ -315,23 +353,23 @@ const GET = exports.GET = {
   },
 
   order: function (node) {
-    return node['itunes:order']
+    return node[NS.itunesOrder]
   },
 
   owner: function (node) {
-    return node['itunes:owner']
+    return node[NS.itunesOwner]
   },
 
   subtitle: function (node) {
-    return node['itunes:subtitle']
+    return node[NS.itunesSubtitle]
   },
 
   summary: function (node) {
-    return node['itunes:summary']
+    return node[NS.itunesSummary]
   },
 
   transcript: function (node) {
-    const items = getItemsWithAttrs(node['podcast:transcript'])
+    const items = getItemsWithAttrs(node[NS.podcastTranscript])
     const finalItems = []
     
     if (Array.isArray(items)) {
@@ -350,7 +388,39 @@ const GET = exports.GET = {
   },
 
   type: function (node) {
-    return node['itunes:type']
+    return node[NS.itunesType]
+  },
+
+  /*
+    NOTE: This is part of the Podcast Index namespace spec.
+    This is a Phase 2 namespace and has not been formalized at this time.
+    https://github.com/Podcastindex-org/podcast-namespace/tree/7c9516937e74b8058d7d49e2b389c7c361cc6a48
+    
+    ---
+
+    Retrieve only one value, and any number of nested recepients.
+  */
+  value: function (node) {
+    const valueItems = getItemsWithAttrs(node[NS.podcastValue], [NS.podcastValueRecipient])
+    const valueItem = Array.isArray(valueItems) && valueItems[0]
+    let finalValue = null
+
+    if (valueItem) {
+      const { method, suggested, type } = valueItem.attrs
+      finalValue = { method, suggested, type }
+
+      const valueRecipientItems = valueItem.nestedTags && valueItem.nestedTags[NS.podcastValueRecipient]
+      if (Array.isArray(valueRecipientItems)) {
+        const finalRecipients = []
+        for (const valueRecipientItem of valueRecipientItems) {
+          const { address, name, split, type } = valueRecipientItem.attrs
+          finalRecipients.push({ address, name, split, type })
+        }
+        finalValue.recipients = finalRecipients
+      }
+    }
+
+    return finalValue
   }
 }
 
@@ -423,12 +493,12 @@ const CLEAN = exports.CLEAN = {
   owner: function (object) {
     let ownerObject = {}
 
-    if (object[0].hasOwnProperty("itunes:name")) {
-      ownerObject.name = object[0]["itunes:name"][0]
+    if (object[0].hasOwnProperty(NS.itunesName)) {
+      ownerObject.name = object[0][NS.itunesName][0]
     }
 
-    if (object[0].hasOwnProperty("itunes:email")) {
-      ownerObject.email = object[0]["itunes:email"][0]
+    if (object[0].hasOwnProperty(NS.itunesEmail)) {
+      ownerObject.email = object[0][NS.itunesEmail][0]
     }
 
     return ownerObject
@@ -640,7 +710,7 @@ const getPodcastFromFeed = exports.getPodcastFromFeed = function (feed, params) 
 =======================
 */
 
-const getItemsWithAttrs = (val) => {
+const getItemsWithAttrs = (val, nestedTags = []) => {
   if (Array.isArray(val)) {
     const items = []
 
@@ -651,9 +721,18 @@ const getItemsWithAttrs = (val) => {
           attrs: {}
         })
       } else if (item) {
+        const finalTags = {}
+        if (nestedTags && nestedTags.length > 0) {
+          for (const nestedTag of nestedTags) {
+            const nestedItem = getItemsWithAttrs(item[nestedTag])
+            finalTags[nestedTag] = nestedItem
+          }
+        }
+
         items.push({
           value: item._,
-          attrs: item['$'] ? item['$'] : {}
+          attrs: item['$'] ? item['$'] : {},
+          ...(Object.keys(finalTags).length > 0) ? { nestedTags: finalTags } : {}
         })
       }
     }
