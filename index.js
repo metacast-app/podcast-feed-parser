@@ -97,6 +97,7 @@ const requiredMeta = []
 const requiredEpisodes = []
 
 const uncleanedMeta = [
+  'categories',
   'funding',
   'guid'
 ]
