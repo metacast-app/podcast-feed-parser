@@ -507,7 +507,7 @@ const CLEAN = exports.CLEAN = {
 
 const cleanDefault = exports.cleanDefault = function (node) {
   // return first item of array
-  if (node !== undefined && node[0]!== undefined) {
+  if (node !== undefined && Array.isArray(node) && node[0]!== undefined) {
     return node[0]
   } else {
     return node
