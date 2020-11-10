@@ -89,7 +89,7 @@ const fieldsEpisodes = [
   'link',
   'order',
   'pubDate',
-  'soundbites',
+  'soundbite',
   'subtitle',
   'summary',
   'transcript'
@@ -106,7 +106,7 @@ const uncleanedMeta = [
 const uncleanedEpisodes = [
   'funding',
   'guid',
-  'soundbites',
+  'soundbite',
   'transcript'
 ]
 
@@ -364,7 +364,7 @@ const GET = exports.GET = {
     return node[NS.itunesOwner]
   },
 
-  soundbites: function (node) {
+  soundbite: function (node) {
     const items = getItemsWithAttrs(node[NS.podcastSoundbite])
     const finalItems = []
 
