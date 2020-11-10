@@ -372,12 +372,13 @@ const GET = exports.GET = {
       const duration = parseFloat(item.attrs.duration)
       const startTime = parseFloat(item.attrs.startTime)
 
-      if (!startTime && startTime !== 0) continue;
+      if (!duration) continue
+      if (!startTime && startTime !== 0) continue
 
       finalItems.push({
-        duration: duration && duration > 0 ? duration : null,
+        duration,
         startTime,
-        value: item.value
+        title: item.value
       })
     }
 
