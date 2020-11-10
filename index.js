@@ -32,6 +32,7 @@ const NS = rssFeedNamespaces = {
   podcastChapters: 'podcast:chapters',
   podcastFunding: 'podcast:funding',
   podcastLocked: 'podcast:locked',
+  podcastSoundbite: 'podcast:soundbite',
   podcastTranscript: 'podcast:transcript',
   podcastValue: 'podcast:value',
   podcastValueRecipient: 'podcast:valueRecipient'
@@ -88,6 +89,7 @@ const fieldsEpisodes = [
   'link',
   'order',
   'pubDate',
+  'soundbites',
   'subtitle',
   'summary',
   'transcript'
@@ -104,6 +106,7 @@ const uncleanedMeta = [
 const uncleanedEpisodes = [
   'funding',
   'guid',
+  'soundbites',
   'transcript'
 ]
 
@@ -359,6 +362,26 @@ const GET = exports.GET = {
 
   owner: function (node) {
     return node[NS.itunesOwner]
+  },
+
+  soundbites: function (node) {
+    const items = getItemsWithAttrs(node[NS.podcastSoundbite])
+    const finalItems = []
+
+    for (const item of items) {
+      const duration = parseFloat(item.attrs.duration)
+      const startTime = parseFloat(item.attrs.startTime)
+
+      if (!startTime && startTime !== 0) continue;
+
+      finalItems.push({
+        duration: duration && duration > 0 ? duration : null,
+        startTime,
+        value: item.value
+      })
+    }
+
+    return finalItems
   },
 
   subtitle: function (node) {
