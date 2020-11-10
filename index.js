@@ -678,9 +678,10 @@ function parseXMLFeed (feedText) {
     return (feed)
 }
 
-async function fetchFeed (url) {
+async function fetchFeed(requestParams) {
   try {
-    const feedResponse = await fetch(url)
+    const { headers } = requestParams
+    const feedResponse = await fetch(requestParams.url, { headers })
     const feedText = await feedResponse.text()
     const feedObject = await promiseParseXMLFeed(feedText)
     return feedObject
@@ -695,11 +696,11 @@ async function fetchFeed (url) {
 =======================
 */
 
-const getPodcastFromURL = exports.getPodcastFromURL = async function (url, params) {
+const getPodcastFromURL = exports.getPodcastFromURL = async function (requestParams, buildParams) {
   try {
-    const options = buildOptions(params)
+    const options = buildOptions(buildParams)
 
-    const feedResponse = await fetchFeed(url)
+    const feedResponse = await fetchFeed(requestParams)
     const channel = feedResponse.rss.channel[0]
 
     const meta = createMetaObjectFromFeed(channel, options)

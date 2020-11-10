@@ -8,7 +8,7 @@ const podcastFeedParser = require('../index');
     }
 
     const url = process.argv[2]
-    const result = await podcastFeedParser.getPodcastFromURL(url)
+    const result = await podcastFeedParser.getPodcastFromURL({ url })
     console.log(result)
 
     return
