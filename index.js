@@ -2,9 +2,7 @@ const fetch = require('isomorphic-fetch')
 const parseString = require('xml2js').parseString
 
 const ERRORS = exports.ERRORS = {
-  'parsingError' : new Error("Parsing error."),
   'requiredError' : new Error("One or more required values are missing from feed."),
-  'fetchingError' : new Error("Fetching error."),
   'optionsError' : new Error("Invalid options.")
 }
 
@@ -660,7 +658,7 @@ function createEpisodesObjectFromFeed (channel, options) {
 function promiseParseXMLFeed (feedText) {
   return new Promise((resolve, reject) => {
         parseString(feedText, (error, result) => {
-            if (error) { reject(ERRORS.parsingError) }
+            if (error) { reject(error) }
             resolve(result)
         })
     })
@@ -670,7 +668,7 @@ function parseXMLFeed (feedText) {
     let feed = {}
     parseString(feedText, (error, result) => {
       if (error) {
-        throw ERRORS.parsingError
+        throw error
       }
       Object.assign(feed, result)
       return result
@@ -686,7 +684,7 @@ async function fetchFeed(requestParams) {
     const feedObject = await promiseParseXMLFeed(feedText)
     return feedObject
   } catch (err) {
-    throw ERRORS.fetchingError
+    throw err
   }
 }
 
