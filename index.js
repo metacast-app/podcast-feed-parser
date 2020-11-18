@@ -1,3 +1,4 @@
+require('abort-controller/polyfill')
 const fetch = require('isomorphic-fetch')
 const parseString = require('xml2js').parseString
 
@@ -678,8 +679,16 @@ function parseXMLFeed (feedText) {
 
 async function fetchFeed(requestParams) {
   try {
-    const { headers } = requestParams
-    const feedResponse = await fetch(requestParams.url, { headers })
+    const { headers, timeout = 20000 } = requestParams
+    const abortController = new AbortController()
+    const signal = abortController.signal
+
+    setTimeout(() => {
+      abortController.abort()
+    }, timeout)
+
+    const feedResponse = await fetch(requestParams.url, { headers, signal })
+
     const feedText = await feedResponse.text()
     const feedObject = await promiseParseXMLFeed(feedText)
     return feedObject
