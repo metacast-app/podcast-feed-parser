@@ -204,16 +204,20 @@ const GET = exports.GET = {
     // grouping in lists. If there is a sub-category, it is the second element
     // of an array.
 
-    const categoriesArray = node["itunes:category"].map(item => {
-      let category = ''
-      category += item['$'].text // primary category
-      if (item[NS.itunesCategory]) { // sub-category
-        category += '>' + item[NS.itunesCategory][0]['$'].text
-      }
-      return category
-    })
+    const itunesCategories = node["itunes:category"]
+    if (Array.isArray(itunesCategories)) {
+      const categoriesArray = itunesCategories.map(item => {
+        let category = ''
+        category += item['$'].text // primary category
+        if (item[NS.itunesCategory]) { // sub-category
+          category += '>' + item[NS.itunesCategory][0]['$'].text
+        }
+        return category
+      })
+      return categoriesArray
+    }
 
-    return categoriesArray
+    return []
   },
 
   chapters: function (node) {
