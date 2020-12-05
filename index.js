@@ -272,14 +272,6 @@ const GET = exports.GET = {
 
   imageURL: function (node) {
     if (
-      node.image &&
-      node.image[0] &&
-      node.image[0].url[0]
-    ) {
-      return node.image[0].url[0]
-    }
-
-    if (
       node["itunes:image"] &&
       node["itunes:image"][0] &&
       node["itunes:image"][0]['$'] &&
@@ -290,6 +282,14 @@ const GET = exports.GET = {
 
     if (typeof node["itunes:image"] === 'string') {
       return node["itunes:image"]
+    }
+
+    if (
+      node.image &&
+      node.image[0] &&
+      node.image[0].url[0]
+    ) {
+      return node.image[0].url[0]
     }
 
     return undefined
