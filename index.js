@@ -235,7 +235,7 @@ const GET = exports.GET = {
   },
 
   duration: function (node) {
-    return node[NS.itunesDuraton]
+    return node[NS.itunesDuration]
   },
 
   editor: function (node) {
@@ -483,9 +483,9 @@ const CLEAN = exports.CLEAN = {
     }
   },
 
-  duration: function (string) {
+  duration: function (arr) {
     // gives duration in seconds
-    let times = string[0].split(':'),
+    let times = arr[0].split(':'),
       sum = 0, mul = 1
 
     while (times.length > 0) {
