@@ -3,8 +3,8 @@ const fetch = require('isomorphic-fetch')
 const parseString = require('xml2js').parseString
 
 const ERRORS = exports.ERRORS = {
-  'requiredError' : new Error("One or more required values are missing from feed."),
-  'optionsError' : new Error("Invalid options.")
+  'requiredError': new Error("One or more required values are missing from feed."),
+  'optionsError': new Error("Invalid options.")
 }
 
 /*
@@ -125,8 +125,7 @@ const DEFAULT = exports.DEFAULT = {
 }
 
 // from https://stackoverflow.com/questions/1584370/how-to-merge-two-arrays-in-javascript-and-de-duplicate-items
-function mergeDedupe(arr)
-{
+function mergeDedupe(arr) {
   return [...new Set([].concat(...arr))];
 }
 
@@ -154,7 +153,7 @@ const buildOptions = exports.buildOptions = function (params) {
     }
 
     // merge empty options and given options
-    Object.keys(options).forEach( key => {
+    Object.keys(options).forEach(key => {
       if (params[key] !== undefined) {
         Object.assign(options[key], params[key])
       }
@@ -399,7 +398,7 @@ const GET = exports.GET = {
   transcript: function (node) {
     const items = getItemsWithAttrs(node[NS.podcastTranscript])
     const finalItems = []
-    
+
     if (Array.isArray(items)) {
       for (const item of items) {
         const { language, rel, type, url } = item.attrs
@@ -535,7 +534,7 @@ const CLEAN = exports.CLEAN = {
 
 const cleanDefault = exports.cleanDefault = function (node) {
   // return first item of array
-  if (node !== undefined && Array.isArray(node) && node[0]!== undefined) {
+  if (node !== undefined && Array.isArray(node) && node[0] !== undefined) {
     return node[0]
   } else {
     return node
@@ -558,7 +557,7 @@ const getInfo = exports.getInfo = function (node, field, uncleaned) {
 
   // if field has a GET function, use that
   // if not, get default value
-  info = (GET[field]) ? GET[field].call(this, node) : getDefault(node,field)
+  info = (GET[field]) ? GET[field].call(this, node) : getDefault(node, field)
 
   // if field is not marked as uncleaned, clean it using CLEAN functions
   if (!uncleaned && info !== undefined) {
@@ -569,11 +568,11 @@ const getInfo = exports.getInfo = function (node, field, uncleaned) {
   return info
 }
 
-function createMetaObjectFromFeed (channel, options) {
+function createMetaObjectFromFeed(channel, options) {
 
   const meta = {}
 
-  options.fields.meta.forEach( (field) => {
+  options.fields.meta.forEach((field) => {
     const obj = {}
     var uncleaned = false
 
@@ -587,7 +586,7 @@ function createMetaObjectFromFeed (channel, options) {
   })
 
   if (options.required && options.required.meta) {
-    options.required.meta.forEach( (field) => {
+    options.required.meta.forEach((field) => {
       if (Object.keys(meta).indexOf(field) < 0) {
         throw ERRORS.requiredError
       }
@@ -598,13 +597,13 @@ function createMetaObjectFromFeed (channel, options) {
 }
 
 // function builds episode objects from parsed podcast feed
-function createEpisodesObjectFromFeed (channel, options) {
+function createEpisodesObjectFromFeed(channel, options) {
   let episodes = []
 
-  channel.item.forEach( (item) => {
+  channel.item.forEach((item) => {
     const episode = {}
 
-    options.fields.episodes.forEach( (field) => {
+    options.fields.episodes.forEach((field) => {
       const obj = {}
       var uncleaned = false
       if (options.uncleaned && options.uncleaned.episodes) {
@@ -617,7 +616,7 @@ function createEpisodesObjectFromFeed (channel, options) {
     })
 
     if (options.required && options.required.episodes) {
-      options.required.episodes.forEach( (field) => {
+      options.required.episodes.forEach((field) => {
         if (Object.keys(episode).indexOf(field) < 0) {
           throw ERRORS.requiredError
         }
@@ -660,25 +659,25 @@ function createEpisodesObjectFromFeed (channel, options) {
 ======================
 */
 
-function promiseParseXMLFeed (feedText) {
+function promiseParseXMLFeed(feedText) {
   return new Promise((resolve, reject) => {
-        parseString(feedText, (error, result) => {
-            if (error) { reject(error) }
-            resolve(result)
-        })
+    parseString(feedText, (error, result) => {
+      if (error) { reject(error) }
+      resolve(result)
     })
+  })
 }
 
-function parseXMLFeed (feedText) {
-    let feed = {}
-    parseString(feedText, (error, result) => {
-      if (error) {
-        throw error
-      }
-      Object.assign(feed, result)
-      return result
-    })
-    return (feed)
+function parseXMLFeed(feedText) {
+  let feed = {}
+  parseString(feedText, (error, result) => {
+    if (error) {
+      throw error
+    }
+    Object.assign(feed, result)
+    return result
+  })
+  return (feed)
 }
 
 async function fetchFeed(requestParams) {
@@ -692,6 +691,10 @@ async function fetchFeed(requestParams) {
     }, timeout)
 
     const feedResponse = await fetch(requestParams.url, { headers, signal })
+
+    if (feedResponse.status === 401) {
+      throw new Error(401)
+    }
 
     const feedText = await feedResponse.text()
     const feedObject = await promiseParseXMLFeed(feedText)
@@ -710,14 +713,13 @@ async function fetchFeed(requestParams) {
 const getPodcastFromURL = exports.getPodcastFromURL = async function (requestParams, buildParams) {
   try {
     const options = buildOptions(buildParams)
-
     const feedResponse = await fetchFeed(requestParams)
     const channel = feedResponse.rss.channel[0]
 
     const meta = createMetaObjectFromFeed(channel, options)
     const episodes = createEpisodesObjectFromFeed(channel, options)
 
-    return {meta, episodes}
+    return { meta, episodes }
   }
   catch (err) {
     throw err
@@ -734,7 +736,7 @@ const getPodcastFromFeed = exports.getPodcastFromFeed = function (feed, params) 
     const meta = createMetaObjectFromFeed(channel, options)
     const episodes = createEpisodesObjectFromFeed(channel, options)
 
-    return {meta, episodes}
+    return { meta, episodes }
   }
   catch (err) {
     throw err
