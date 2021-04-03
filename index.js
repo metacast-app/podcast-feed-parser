@@ -91,7 +91,8 @@ const fieldsEpisodes = [
   'soundbite',
   'subtitle',
   'summary',
-  'transcript'
+  'transcript',
+  'value'
 ]
 
 const requiredMeta = []
