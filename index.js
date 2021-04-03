@@ -441,8 +441,8 @@ const GET = exports.GET = {
       if (Array.isArray(valueRecipientItems)) {
         const finalRecipients = []
         for (const valueRecipientItem of valueRecipientItems) {
-          const { address, name, split, type } = valueRecipientItem.attrs
-          finalRecipients.push({ address, name, split, type })
+          const { address, customKey, customValue, fee, name, split, type } = valueRecipientItem.attrs
+          finalRecipients.push({ address, customKey, customValue, fee, name, split, type })
         }
         finalValue.recipients = finalRecipients
       }
