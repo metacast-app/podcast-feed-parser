@@ -573,20 +573,22 @@ function createMetaObjectFromFeed(channel, options) {
 
   const meta = {}
 
-  options.fields.meta.forEach((field) => {
-    const obj = {}
-    var uncleaned = false
+  if (Array.isArray(options.fields.meta)) {
+    options.fields.meta.forEach((field) => {
+      const obj = {}
+      var uncleaned = false
+  
+      if (options.uncleaned && Array.isArray(options.uncleaned.meta)) {
+        var uncleaned = (options.uncleaned.meta.indexOf(field) >= 0)
+      }
+  
+      obj[field] = getInfo(channel, field, uncleaned)
+  
+      Object.assign(meta, obj)
+    })
+  }
 
-    if (options.uncleaned && options.uncleaned.meta) {
-      var uncleaned = (options.uncleaned.meta.indexOf(field) >= 0)
-    }
-
-    obj[field] = getInfo(channel, field, uncleaned)
-
-    Object.assign(meta, obj)
-  })
-
-  if (options.required && options.required.meta) {
+  if (options.required && Array.isArray(options.required.meta)) {
     options.required.meta.forEach((field) => {
       if (Object.keys(meta).indexOf(field) < 0) {
         throw ERRORS.requiredError
@@ -601,31 +603,35 @@ function createMetaObjectFromFeed(channel, options) {
 function createEpisodesObjectFromFeed(channel, options) {
   let episodes = []
 
-  channel.item.forEach((item) => {
-    const episode = {}
-
-    options.fields.episodes.forEach((field) => {
-      const obj = {}
-      var uncleaned = false
-      if (options.uncleaned && options.uncleaned.episodes) {
-        var uncleaned = (options.uncleaned.episodes.indexOf(field) >= 0)
+  if (channel && Array.isArray(channel.item)) {
+    channel.item.forEach((item) => {
+      const episode = {}
+      
+      if (options.fields && Array.isArray(options.fields.episodes)) {
+        options.fields.episodes.forEach((field) => {
+          const obj = {}
+          var uncleaned = false
+          if (options.uncleaned && Array.isArray(options.uncleaned.episodes)) {
+            var uncleaned = (options.uncleaned.episodes.indexOf(field) >= 0)
+          }
+    
+          obj[field] = getInfo(item, field, uncleaned)
+    
+          Object.assign(episode, obj)
+        })
       }
-
-      obj[field] = getInfo(item, field, uncleaned)
-
-      Object.assign(episode, obj)
+  
+      if (options.required && Array.isArray(options.required.episodes)) {
+        options.required.episodes.forEach((field) => {
+          if (Object.keys(episode).indexOf(field) < 0) {
+            throw ERRORS.requiredError
+          }
+        })
+      }
+  
+      episodes.push(episode)
     })
-
-    if (options.required && options.required.episodes) {
-      options.required.episodes.forEach((field) => {
-        if (Object.keys(episode).indexOf(field) < 0) {
-          throw ERRORS.requiredError
-        }
-      })
-    }
-
-    episodes.push(episode)
-  })
+  }
 
   episodes.sort(
     function (a, b) {
