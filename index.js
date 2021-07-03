@@ -101,7 +101,8 @@ const requiredEpisodes = []
 const uncleanedMeta = [
   'categories',
   'funding',
-  'guid'
+  'guid',
+  'value'
 ]
 const uncleanedEpisodes = [
   'funding',
@@ -421,34 +422,32 @@ const GET = exports.GET = {
 
   /*
     NOTE: This is part of the Podcast Index namespace spec.
-    This is a Phase 2 namespace and has not been formalized at this time.
     https://github.com/Podcastindex-org/podcast-namespace/tree/7c9516937e74b8058d7d49e2b389c7c361cc6a48
-    
-    ---
-
-    Retrieve only one value, and any number of nested recepients.
   */
   value: function (node) {
     const valueItems = getItemsWithAttrs(node[NS.podcastValue], [NS.podcastValueRecipient])
-    const valueItem = Array.isArray(valueItems) && valueItems[0]
-    let finalValue = null
+    let finalValues = null
 
-    if (valueItem) {
-      const { method, suggested, type } = valueItem.attrs
-      finalValue = { method, suggested, type }
-
-      const valueRecipientItems = valueItem.nestedTags && valueItem.nestedTags[NS.podcastValueRecipient]
-      if (Array.isArray(valueRecipientItems)) {
-        const finalRecipients = []
-        for (const valueRecipientItem of valueRecipientItems) {
-          const { address, customKey, customValue, fee, name, split, type } = valueRecipientItem.attrs
-          finalRecipients.push({ address, customKey, customValue, fee, name, split, type })
+    if (valueItems && valueItems.length > 0) {
+      finalValues = []
+      for (const valueItem of valueItems) {
+        const { method, suggested, type } = valueItem.attrs
+        let finalValue = { method, suggested, type }
+  
+        const valueRecipientItems = valueItem.nestedTags && valueItem.nestedTags[NS.podcastValueRecipient]
+        if (Array.isArray(valueRecipientItems)) {
+          const finalRecipients = []
+          for (const valueRecipientItem of valueRecipientItems) {
+            const { address, customKey, customValue, fee, name, split, type } = valueRecipientItem.attrs
+            finalRecipients.push({ address, customKey, customValue, fee, name, split, type })
+          }
+          finalValue.recipients = finalRecipients
+          finalValues.push(finalValue)
         }
-        finalValue.recipients = finalRecipients
       }
     }
 
-    return finalValue
+    return finalValues
   }
 }
 
