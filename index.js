@@ -108,7 +108,8 @@ const uncleanedEpisodes = [
   'funding',
   'guid',
   'soundbite',
-  'transcript'
+  'transcript',
+  'value'
 ]
 
 const DEFAULT = exports.DEFAULT = {
