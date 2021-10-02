@@ -18,9 +18,13 @@
       * [Asynchronously Fetching Remote Feeds](#asynchronously-fetching-remote-feeds)
       * [Errors](#errors)
 
-# podcast-feed-parser
+# podverse/podcast-feed-parser
 
 A highly customizable package for fetching and parsing podcast feeds into simple and manageable JavaScript objects. For use with node and in the browser.
+
+## How to make contributions to podverse/podcast-feed-parser
+
+**See the contrib.md file for information on how to get up-and-running and make contributions to this repository.**
 
 ## Overview
 By default, `podcast-feed-parser` will parse a podcast's xml feed and return an object with the following properties. `meta` contains all of the information pertinent to the podcast show itself, and `episodes` is list of episode objects which contain the information pertinent to each individual episode of the podcast.
