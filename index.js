@@ -44,7 +44,6 @@ const NS = rssFeedNamespaces = {
 */
 
 const fieldsMeta = [
-  'title',
   'author',
   'blocked',
   'categories',
@@ -66,13 +65,13 @@ const fieldsMeta = [
   'owner',
   'subtitle',
   'summary',
+  'title',
   'type',
   'value',
   'webMaster'
 ]
 
 const fieldsEpisodes = [
-  'title',
   'author',
   'blocked',
   'chapters',
@@ -91,6 +90,7 @@ const fieldsEpisodes = [
   'soundbite',
   'subtitle',
   'summary',
+  'title',
   'transcript',
   'value'
 ]
