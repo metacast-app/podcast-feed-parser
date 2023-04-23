@@ -210,9 +210,11 @@ const GET = exports.GET = {
     if (Array.isArray(itunesCategories)) {
       const categoriesArray = itunesCategories.map(item => {
         let category = ''
-        category += item['$'].text // primary category
-        if (item[NS.itunesCategory]) { // sub-category
-          category += '>' + item[NS.itunesCategory][0]['$'].text
+        if (item && item['$'] && item['$'].text) {
+          category += item['$'].text // primary category
+          if (item[NS.itunesCategory]) { // sub-category
+            category += '>' + item[NS.itunesCategory][0]['$'].text
+          }
         }
         return category
       })
