@@ -34,7 +34,9 @@ const NS = rssFeedNamespaces = {
   podcastSoundbite: 'podcast:soundbite',
   podcastTranscript: 'podcast:transcript',
   podcastValue: 'podcast:value',
-  podcastValueRecipient: 'podcast:valueRecipient'
+  podcastValueRecipient: 'podcast:valueRecipient',
+  podcastValueTimeSplit: "podcast:valueTimeSplit",
+  podcastRemoteItem: "podcast:remoteItem"
 }
 
 /*
