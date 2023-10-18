@@ -772,8 +772,14 @@ const getItemsWithAttrs = (val, nestedTags = []) => {
         const finalTags = {}
         if (nestedTags && nestedTags.length > 0) {
           for (const nestedTag of nestedTags) {
-            const nestedItem = getItemsWithAttrs(item[nestedTag])
-            finalTags[nestedTag] = nestedItem
+            if (typeof nestedTag === 'string') {
+              const nestedItem = getItemsWithAttrs(item[nestedTag])
+              finalTags[nestedTag] = nestedItem
+            } else {
+              const {tag, nestedTags = []} = nestedTag;
+              const nestedItem = getItemsWithAttrs(item[tag], nestedTags)
+              finalTags[tag] = nestedItem
+            }
           }
         }
 
