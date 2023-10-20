@@ -34,7 +34,9 @@ const NS = rssFeedNamespaces = {
   podcastSoundbite: 'podcast:soundbite',
   podcastTranscript: 'podcast:transcript',
   podcastValue: 'podcast:value',
-  podcastValueRecipient: 'podcast:valueRecipient'
+  podcastValueRecipient: 'podcast:valueRecipient',
+  podcastValueTimeSplit: "podcast:valueTimeSplit",
+  podcastRemoteItem: "podcast:remoteItem"
 }
 
 /*
@@ -428,9 +430,9 @@ const GET = exports.GET = {
     https://github.com/Podcastindex-org/podcast-namespace/tree/7c9516937e74b8058d7d49e2b389c7c361cc6a48
   */
   value: function (node) {
-    const valueItems = getItemsWithAttrs(node[NS.podcastValue], [NS.podcastValueRecipient])
+    const valueItems = getItemsWithAttrs(node[NS.podcastValue], [NS.podcastValueRecipient, {tag: NS.podcastValueTimeSplit, nestedTags: [NS.podcastRemoteItem]}])
     let finalValues = null
-
+  
     if (valueItems && valueItems.length > 0) {
       finalValues = []
       for (const valueItem of valueItems) {
@@ -445,11 +447,31 @@ const GET = exports.GET = {
             finalRecipients.push({ address, customKey, customValue, fee, name, split, type })
           }
           finalValue.recipients = finalRecipients
+        }
+        
+        const valueTimeSplits = valueItem.nestedTags && valueItem.nestedTags[NS.podcastValueTimeSplit];
+        if (Array.isArray(valueTimeSplits)) {
+          const finalTimeSplits = [];
+          for (const valueTimeSplit of valueTimeSplits) {
+            const { startTime, duration, remotePercentage } = valueTimeSplit.attrs;
+            const remoteItems = valueItem.nestedTags && valueTimeSplit.nestedTags[NS.podcastRemoteItem];
+            if (Array.isArray(remoteItems)) {
+              for (const remoteItem of remoteItems) {
+                const { feedGuid, itemGuid } = remoteItem.attrs;
+                finalTimeSplits.push({ startTime, duration, remotePercentage, feedGuid, itemGuid });
+              }
+            }
+          }
+  
+          finalValue.timeSplits = finalTimeSplits;
+        }
+  
+        if (Array.isArray(finalValue.recipients) || Array.isArray(finalValue.timeSplits)) {
           finalValues.push(finalValue)
         }
       }
     }
-
+  
     return finalValues
   }
 }
@@ -772,8 +794,14 @@ const getItemsWithAttrs = (val, nestedTags = []) => {
         const finalTags = {}
         if (nestedTags && nestedTags.length > 0) {
           for (const nestedTag of nestedTags) {
-            const nestedItem = getItemsWithAttrs(item[nestedTag])
-            finalTags[nestedTag] = nestedItem
+            if (typeof nestedTag === 'string') {
+              const nestedItem = getItemsWithAttrs(item[nestedTag])
+              finalTags[nestedTag] = nestedItem
+            } else {
+              const {tag, nestedTags = []} = nestedTag;
+              const nestedItem = getItemsWithAttrs(item[tag], nestedTags)
+              finalTags[tag] = nestedItem
+            }
           }
         }
 
