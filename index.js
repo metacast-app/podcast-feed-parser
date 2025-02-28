@@ -69,6 +69,7 @@ const fieldsMeta = [
   'locked',
   'pubDate',
   'owner',
+  'people',
   'subtitle',
   'summary',
   'title',
@@ -110,6 +111,7 @@ const uncleanedMeta = [
   'categoriesFlat',
   'funding',
   'guid',
+  'people',
   'value'
 ]
 const uncleanedEpisodes = [
