@@ -2,17 +2,19 @@ require('abort-controller/polyfill')
 const fetch = require('isomorphic-fetch')
 const parseString = require('xml2js').parseString
 
-const ERRORS = exports.ERRORS = {
-  'requiredError': new Error("One or more required values are missing from feed."),
-  'optionsError': new Error("Invalid options.")
-}
+const ERRORS = (exports.ERRORS = {
+  requiredError: new Error(
+    'One or more required values are missing from feed.'
+  ),
+  optionsError: new Error('Invalid options.')
+})
 
 /*
 ============================================
 === CONSTANTS ===
 ============================================
 */
-const NS = rssFeedNamespaces = {
+const NS = (rssFeedNamespaces = {
   itunesAuthor: 'itunes:author',
   itunesBlock: 'itunes:block',
   itunesCategory: 'itunes:category',
@@ -31,13 +33,14 @@ const NS = rssFeedNamespaces = {
   podcastChapters: 'podcast:chapters',
   podcastFunding: 'podcast:funding',
   podcastLocked: 'podcast:locked',
+  podcastPerson: 'podcast:person',
   podcastSoundbite: 'podcast:soundbite',
   podcastTranscript: 'podcast:transcript',
   podcastValue: 'podcast:value',
   podcastValueRecipient: 'podcast:valueRecipient',
-  podcastValueTimeSplit: "podcast:valueTimeSplit",
-  podcastRemoteItem: "podcast:remoteItem"
-}
+  podcastValueTimeSplit: 'podcast:valueTimeSplit',
+  podcastRemoteItem: 'podcast:remoteItem'
+})
 
 /*
 ============================================
@@ -88,6 +91,7 @@ const fieldsEpisodes = [
   'language',
   'link',
   'order',
+  'person',
   'pubDate',
   'soundbite',
   'subtitle',
@@ -100,21 +104,17 @@ const fieldsEpisodes = [
 const requiredMeta = []
 const requiredEpisodes = []
 
-const uncleanedMeta = [
-  'categories',
-  'funding',
-  'guid',
-  'value'
-]
+const uncleanedMeta = ['categories', 'funding', 'guid', 'value']
 const uncleanedEpisodes = [
   'funding',
   'guid',
+  'person',
   'soundbite',
   'transcript',
   'value'
 ]
 
-const DEFAULT = exports.DEFAULT = {
+const DEFAULT = (exports.DEFAULT = {
   fields: {
     meta: fieldsMeta,
     episodes: fieldsEpisodes
@@ -127,14 +127,14 @@ const DEFAULT = exports.DEFAULT = {
     meta: uncleanedMeta,
     episodes: uncleanedEpisodes
   }
-}
+})
 
 // from https://stackoverflow.com/questions/1584370/how-to-merge-two-arrays-in-javascript-and-de-duplicate-items
 function mergeDedupe(arr) {
-  return [...new Set([].concat(...arr))];
+  return [...new Set([].concat(...arr))]
 }
 
-const buildOptions = exports.buildOptions = function (params) {
+const buildOptions = (exports.buildOptions = function (params) {
   try {
     let options = {
       fields: {
@@ -158,7 +158,7 @@ const buildOptions = exports.buildOptions = function (params) {
     }
 
     // merge empty options and given options
-    Object.keys(options).forEach(key => {
+    Object.keys(options).forEach((key) => {
       if (params[key] !== undefined) {
         Object.assign(options[key], params[key])
       }
@@ -167,21 +167,29 @@ const buildOptions = exports.buildOptions = function (params) {
     // if 'default' given in parameters, merge default options with given custom options
     //  and dedupe
     if (options.fields.meta.indexOf('default') >= 0) {
-      options.fields.meta = mergeDedupe([DEFAULT.fields.meta, params.fields.meta])
+      options.fields.meta = mergeDedupe([
+        DEFAULT.fields.meta,
+        params.fields.meta
+      ])
       options.fields.meta.splice(options.fields.meta.indexOf('default'), 1)
     }
 
     if (options.fields.episodes.indexOf('default') >= 0) {
-      options.fields.episodes = mergeDedupe([DEFAULT.fields.episodes, params.fields.episodes])
-      options.fields.episodes.splice(options.fields.episodes.indexOf('default'), 1)
+      options.fields.episodes = mergeDedupe([
+        DEFAULT.fields.episodes,
+        params.fields.episodes
+      ])
+      options.fields.episodes.splice(
+        options.fields.episodes.indexOf('default'),
+        1
+      )
     }
 
     return options
-
   } catch (err) {
     throw ERRORS.optionsError
   }
-}
+})
 
 /*
 =====================
@@ -189,8 +197,7 @@ const buildOptions = exports.buildOptions = function (params) {
 =====================
 */
 
-const GET = exports.GET = {
-
+const GET = (exports.GET = {
   author: function (node) {
     if (node.author) {
       return node.author
@@ -208,13 +215,14 @@ const GET = exports.GET = {
     // grouping in lists. If there is a sub-category, it is the second element
     // of an array.
 
-    const itunesCategories = node["itunes:category"]
+    const itunesCategories = node['itunes:category']
     if (Array.isArray(itunesCategories)) {
-      const categoriesArray = itunesCategories.map(item => {
+      const categoriesArray = itunesCategories.map((item) => {
         let category = ''
         if (item && item['$'] && item['$'].text) {
           category += item['$'].text // primary category
-          if (item[NS.itunesCategory]) { // sub-category
+          if (item[NS.itunesCategory]) {
+            // sub-category
             category += '>' + item[NS.itunesCategory][0]['$'].text
           }
         }
@@ -278,23 +286,19 @@ const GET = exports.GET = {
 
   imageURL: function (node) {
     if (
-      node["itunes:image"] &&
-      node["itunes:image"][0] &&
-      node["itunes:image"][0]['$'] &&
-      node["itunes:image"][0]['$'].href
+      node['itunes:image'] &&
+      node['itunes:image'][0] &&
+      node['itunes:image'][0]['$'] &&
+      node['itunes:image'][0]['$'].href
     ) {
-      return node["itunes:image"][0]['$'].href
+      return node['itunes:image'][0]['$'].href
     }
 
-    if (typeof node["itunes:image"] === 'string') {
-      return node["itunes:image"]
+    if (typeof node['itunes:image'] === 'string') {
+      return node['itunes:image']
     }
 
-    if (
-      node.image &&
-      node.image[0] &&
-      node.image[0].url[0]
-    ) {
+    if (node.image && node.image[0] && node.image[0].url[0]) {
       return node.image[0].url[0]
     }
 
@@ -373,6 +377,25 @@ const GET = exports.GET = {
     return node[NS.itunesOwner]
   },
 
+  people: function (node) {
+    const items = getItemsWithAttrs(node[NS.podcastPerson])
+    const finalItems = []
+
+    if (Array.isArray(items)) {
+      for (const item of items) {
+        const { role, group, img, href } = item.attrs
+        finalItems.push({
+          role,
+          group,
+          img,
+          href
+        })
+      }
+    }
+
+    return finalItems
+  },
+
   soundbite: function (node) {
     const items = getItemsWithAttrs(node[NS.podcastSoundbite])
     const finalItems = []
@@ -430,55 +453,81 @@ const GET = exports.GET = {
     https://github.com/Podcastindex-org/podcast-namespace/tree/7c9516937e74b8058d7d49e2b389c7c361cc6a48
   */
   value: function (node) {
-    const valueItems = getItemsWithAttrs(node[NS.podcastValue], [NS.podcastValueRecipient, {tag: NS.podcastValueTimeSplit, nestedTags: [NS.podcastRemoteItem]}])
+    const valueItems = getItemsWithAttrs(node[NS.podcastValue], [
+      NS.podcastValueRecipient,
+      { tag: NS.podcastValueTimeSplit, nestedTags: [NS.podcastRemoteItem] }
+    ])
     let finalValues = null
-  
+
     if (valueItems && valueItems.length > 0) {
       finalValues = []
       for (const valueItem of valueItems) {
         const { method, suggested, type } = valueItem.attrs
         let finalValue = { method, suggested, type }
-  
-        const valueRecipientItems = valueItem.nestedTags && valueItem.nestedTags[NS.podcastValueRecipient]
+
+        const valueRecipientItems =
+          valueItem.nestedTags && valueItem.nestedTags[NS.podcastValueRecipient]
         if (Array.isArray(valueRecipientItems)) {
           const finalRecipients = []
           for (const valueRecipientItem of valueRecipientItems) {
-            const { address, customKey, customValue, fee, name, split, type } = valueRecipientItem.attrs
-            finalRecipients.push({ address, customKey, customValue, fee, name, split, type })
+            const { address, customKey, customValue, fee, name, split, type } =
+              valueRecipientItem.attrs
+            finalRecipients.push({
+              address,
+              customKey,
+              customValue,
+              fee,
+              name,
+              split,
+              type
+            })
           }
           finalValue.recipients = finalRecipients
         }
-        
-        const valueTimeSplits = valueItem.nestedTags && valueItem.nestedTags[NS.podcastValueTimeSplit];
+
+        const valueTimeSplits =
+          valueItem.nestedTags && valueItem.nestedTags[NS.podcastValueTimeSplit]
         if (Array.isArray(valueTimeSplits)) {
-          const finalTimeSplits = [];
+          const finalTimeSplits = []
           for (const valueTimeSplit of valueTimeSplits) {
-            const { startTime, duration, remotePercentage } = valueTimeSplit.attrs;
-            const remoteItems = valueItem.nestedTags && valueTimeSplit.nestedTags[NS.podcastRemoteItem];
+            const { startTime, duration, remotePercentage } =
+              valueTimeSplit.attrs
+            const remoteItems =
+              valueItem.nestedTags &&
+              valueTimeSplit.nestedTags[NS.podcastRemoteItem]
             if (Array.isArray(remoteItems)) {
               for (const remoteItem of remoteItems) {
-                const { feedGuid, itemGuid } = remoteItem.attrs;
-                finalTimeSplits.push({ startTime, duration, remotePercentage, feedGuid, itemGuid });
+                const { feedGuid, itemGuid } = remoteItem.attrs
+                finalTimeSplits.push({
+                  startTime,
+                  duration,
+                  remotePercentage,
+                  feedGuid,
+                  itemGuid
+                })
               }
             }
           }
-  
-          finalValue.timeSplits = finalTimeSplits;
+
+          finalValue.timeSplits = finalTimeSplits
         }
-  
-        if (Array.isArray(finalValue.recipients) || Array.isArray(finalValue.timeSplits)) {
+
+        if (
+          Array.isArray(finalValue.recipients) ||
+          Array.isArray(finalValue.timeSplits)
+        ) {
           finalValues.push(finalValue)
         }
       }
     }
-  
+
     return finalValues
   }
-}
+})
 
-const getDefault = exports.getDefault = function (node, field) {
-  return (node[field]) ? node[field] : undefined
-}
+const getDefault = (exports.getDefault = function (node, field) {
+  return node[field] ? node[field] : undefined
+})
 
 /*
 =======================
@@ -486,7 +535,7 @@ const getDefault = exports.getDefault = function (node, field) {
 =======================
 */
 
-const CLEAN = exports.CLEAN = {
+const CLEAN = (exports.CLEAN = {
   author: function (obj) {
     return obj
   },
@@ -510,7 +559,8 @@ const CLEAN = exports.CLEAN = {
   duration: function (arr) {
     // gives duration in seconds
     let times = arr[0].split(':'),
-      sum = 0, mul = 1
+      sum = 0,
+      mul = 1
 
     while (times.length > 0) {
       sum += mul * parseInt(times.pop())
@@ -522,9 +572,9 @@ const CLEAN = exports.CLEAN = {
 
   enclosure: function (object) {
     return {
-      length: object[0]["$"].length,
-      type: object[0]["$"].type,
-      url: object[0]["$"].url
+      length: object[0]['$'].length,
+      type: object[0]['$'].type,
+      url: object[0]['$'].url
     }
   },
 
@@ -555,16 +605,16 @@ const CLEAN = exports.CLEAN = {
 
     return ownerObject
   }
-}
+})
 
-const cleanDefault = exports.cleanDefault = function (node) {
+const cleanDefault = (exports.cleanDefault = function (node) {
   // return first item of array
   if (node !== undefined && Array.isArray(node) && node[0] !== undefined) {
     return node[0]
   } else {
     return node
   }
-}
+})
 
 /*
 =================================
@@ -572,42 +622,41 @@ const cleanDefault = exports.cleanDefault = function (node) {
 =================================
 */
 
-const getInfo = exports.getInfo = function (node, field, uncleaned) {
+const getInfo = (exports.getInfo = function (node, field, uncleaned) {
   // gets relevant info from podcast feed using options:
   // @field - string - the desired field name, corresponding with GET and clean
   //     functions
   // @uncleaned - boolean - if field should not be cleaned before returning
 
-  var info;
+  var info
 
   // if field has a GET function, use that
   // if not, get default value
-  info = (GET[field]) ? GET[field].call(this, node) : getDefault(node, field)
+  info = GET[field] ? GET[field].call(this, node) : getDefault(node, field)
 
   // if field is not marked as uncleaned, clean it using CLEAN functions
   if (!uncleaned && info !== undefined) {
-    info = (CLEAN[field]) ? CLEAN[field].call(this, info) : cleanDefault(info)
+    info = CLEAN[field] ? CLEAN[field].call(this, info) : cleanDefault(info)
   } else {
   }
 
   return info
-}
+})
 
 function createMetaObjectFromFeed(channel, options) {
-
   const meta = {}
 
   if (Array.isArray(options.fields.meta)) {
     options.fields.meta.forEach((field) => {
       const obj = {}
       var uncleaned = false
-  
+
       if (options.uncleaned && Array.isArray(options.uncleaned.meta)) {
-        var uncleaned = (options.uncleaned.meta.indexOf(field) >= 0)
+        var uncleaned = options.uncleaned.meta.indexOf(field) >= 0
       }
-  
+
       obj[field] = getInfo(channel, field, uncleaned)
-  
+
       Object.assign(meta, obj)
     })
   }
@@ -630,21 +679,21 @@ function createEpisodesObjectFromFeed(channel, options) {
   if (channel && Array.isArray(channel.item)) {
     channel.item.forEach((item) => {
       const episode = {}
-      
+
       if (options.fields && Array.isArray(options.fields.episodes)) {
         options.fields.episodes.forEach((field) => {
           const obj = {}
           var uncleaned = false
           if (options.uncleaned && Array.isArray(options.uncleaned.episodes)) {
-            var uncleaned = (options.uncleaned.episodes.indexOf(field) >= 0)
+            var uncleaned = options.uncleaned.episodes.indexOf(field) >= 0
           }
-    
+
           obj[field] = getInfo(item, field, uncleaned)
-    
+
           Object.assign(episode, obj)
         })
       }
-  
+
       if (options.required && Array.isArray(options.required.episodes)) {
         options.required.episodes.forEach((field) => {
           if (Object.keys(episode).indexOf(field) < 0) {
@@ -652,34 +701,32 @@ function createEpisodesObjectFromFeed(channel, options) {
           }
         })
       }
-  
+
       episodes.push(episode)
     })
   }
 
-  episodes.sort(
-    function (a, b) {
-      // sorts by order first, if defined, then sorts by date.
-      // if multiple episodes were published at the same time,
-      // they are then sorted by title
-      if (a.order == b.order) {
-        if (a.pubDate == b.pubDate) {
-          return a.title > b.title ? -1 : 1
-        }
-        return b.pubDate > a.pubDate ? 1 : -1
+  episodes.sort(function (a, b) {
+    // sorts by order first, if defined, then sorts by date.
+    // if multiple episodes were published at the same time,
+    // they are then sorted by title
+    if (a.order == b.order) {
+      if (a.pubDate == b.pubDate) {
+        return a.title > b.title ? -1 : 1
       }
-
-      if (a.order && !b.order) {
-        return 1
-      }
-
-      if (b.order && !a.order) {
-        return -1
-      }
-
-      return a.order > b.order ? -1 : 1
+      return b.pubDate > a.pubDate ? 1 : -1
     }
-  )
+
+    if (a.order && !b.order) {
+      return 1
+    }
+
+    if (b.order && !a.order) {
+      return -1
+    }
+
+    return a.order > b.order ? -1 : 1
+  })
 
   return episodes
 }
@@ -693,7 +740,9 @@ function createEpisodesObjectFromFeed(channel, options) {
 function promiseParseXMLFeed(feedText) {
   return new Promise((resolve, reject) => {
     parseString(feedText, (error, result) => {
-      if (error) { reject(error) }
+      if (error) {
+        reject(error)
+      }
       resolve(result)
     })
   })
@@ -708,7 +757,7 @@ function parseXMLFeed(feedText) {
     Object.assign(feed, result)
     return result
   })
-  return (feed)
+  return feed
 }
 
 async function fetchFeed(requestParams) {
@@ -741,7 +790,10 @@ async function fetchFeed(requestParams) {
 =======================
 */
 
-const getPodcastFromURL = exports.getPodcastFromURL = async function (requestParams, buildParams) {
+const getPodcastFromURL = (exports.getPodcastFromURL = async function (
+  requestParams,
+  buildParams
+) {
   try {
     const options = buildOptions(buildParams)
     const feedResponse = await fetchFeed(requestParams)
@@ -751,13 +803,15 @@ const getPodcastFromURL = exports.getPodcastFromURL = async function (requestPar
     const episodes = createEpisodesObjectFromFeed(channel, options)
 
     return { meta, episodes }
-  }
-  catch (err) {
+  } catch (err) {
     throw err
   }
-}
+})
 
-const getPodcastFromFeed = exports.getPodcastFromFeed = function (feed, params) {
+const getPodcastFromFeed = (exports.getPodcastFromFeed = function (
+  feed,
+  params
+) {
   try {
     const options = buildOptions(params)
 
@@ -768,11 +822,10 @@ const getPodcastFromFeed = exports.getPodcastFromFeed = function (feed, params) 
     const episodes = createEpisodesObjectFromFeed(channel, options)
 
     return { meta, episodes }
-  }
-  catch (err) {
+  } catch (err) {
     throw err
   }
-}
+})
 
 /*
 =======================
@@ -798,7 +851,7 @@ const getItemsWithAttrs = (val, nestedTags = []) => {
               const nestedItem = getItemsWithAttrs(item[nestedTag])
               finalTags[nestedTag] = nestedItem
             } else {
-              const {tag, nestedTags = []} = nestedTag;
+              const { tag, nestedTags = [] } = nestedTag
               const nestedItem = getItemsWithAttrs(item[tag], nestedTags)
               finalTags[tag] = nestedItem
             }
@@ -808,7 +861,9 @@ const getItemsWithAttrs = (val, nestedTags = []) => {
         items.push({
           value: item._,
           attrs: item['$'] ? item['$'] : {},
-          ...(Object.keys(finalTags).length > 0) ? { nestedTags: finalTags } : {}
+          ...(Object.keys(finalTags).length > 0
+            ? { nestedTags: finalTags }
+            : {})
         })
       }
     }
