@@ -385,6 +385,7 @@ const GET = (exports.GET = {
       for (const item of items) {
         const { role, group, img, href } = item.attrs
         finalItems.push({
+          name: item.value,
           role,
           group,
           img,
