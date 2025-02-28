@@ -52,6 +52,7 @@ const fieldsMeta = [
   'author',
   'blocked',
   'categories',
+  'categoriesFlat',
   'complete',
   'description',
   'docs',
@@ -91,7 +92,7 @@ const fieldsEpisodes = [
   'language',
   'link',
   'order',
-  'person',
+  'people',
   'pubDate',
   'soundbite',
   'subtitle',
@@ -104,11 +105,17 @@ const fieldsEpisodes = [
 const requiredMeta = []
 const requiredEpisodes = []
 
-const uncleanedMeta = ['categories', 'funding', 'guid', 'value']
+const uncleanedMeta = [
+  'categories',
+  'categoriesFlat',
+  'funding',
+  'guid',
+  'value'
+]
 const uncleanedEpisodes = [
   'funding',
   'guid',
-  'person',
+  'people',
   'soundbite',
   'transcript',
   'value'
@@ -215,7 +222,7 @@ const GET = (exports.GET = {
     // grouping in lists. If there is a sub-category, it is the second element
     // of an array.
 
-    const itunesCategories = node['itunes:category']
+    const itunesCategories = node[NS.itunesCategory]
     if (Array.isArray(itunesCategories)) {
       const categoriesArray = itunesCategories.map((item) => {
         let category = ''
@@ -232,6 +239,33 @@ const GET = (exports.GET = {
     }
 
     return []
+  },
+
+  categoriesFlat: function (node) {
+    // returns a flat, deduped list of categories
+    // (primary and sub-categories as separate entries)
+
+    const itunesCategories = node[NS.itunesCategory]
+    if (!Array.isArray(itunesCategories)) {
+      return []
+    }
+
+    const categorySet = new Set()
+
+    itunesCategories.forEach((item) => {
+      if (item && item['$'] && item['$'].text) {
+        categorySet.add(item['$'].text)
+        if (item[NS.itunesCategory] && Array.isArray(item[NS.itunesCategory])) {
+          item[NS.itunesCategory].forEach((subItem) => {
+            if (subItem && subItem['$'] && subItem['$'].text) {
+              categorySet.add(subItem['$'].text)
+            }
+          })
+        }
+      }
+    })
+
+    return Array.from(categorySet)
   },
 
   chapters: function (node) {
