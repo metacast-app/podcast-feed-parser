@@ -32,6 +32,7 @@ const NS = (rssFeedNamespaces = {
   itunesType: 'itunes:type',
   podcastChapters: 'podcast:chapters',
   podcastFunding: 'podcast:funding',
+  podcastGuid: 'podcast:guid',
   podcastLocked: 'podcast:locked',
   podcastPerson: 'podcast:person',
   podcastSoundbite: 'podcast:soundbite',
@@ -67,6 +68,7 @@ const fieldsMeta = [
   'lastBuildDate',
   'link',
   'locked',
+  'podcastGuid',
   'pubDate',
   'owner',
   'people',
@@ -445,6 +447,10 @@ const GET = (exports.GET = {
     }
 
     return finalItems
+  },
+
+  podcastGuid: function (node) {
+    return node[NS.podcastGuid]
   },
 
   soundbite: function (node) {
