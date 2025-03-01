@@ -32,6 +32,7 @@ const NS = (rssFeedNamespaces = {
   itunesType: 'itunes:type',
   podcastChapters: 'podcast:chapters',
   podcastFunding: 'podcast:funding',
+  podcastGuid: 'podcast:guid',
   podcastLocked: 'podcast:locked',
   podcastPerson: 'podcast:person',
   podcastSoundbite: 'podcast:soundbite',
@@ -67,6 +68,7 @@ const fieldsMeta = [
   'lastBuildDate',
   'link',
   'locked',
+  'podcastGuid',
   'pubDate',
   'owner',
   'people',
@@ -312,9 +314,23 @@ const GET = (exports.GET = {
 
   guid: function (node) {
     if (node.guid) {
+      // Not clear if this condition is ever triggered - leaving it here for
+      // legacy reason
       if (typeof node.guid === 'string') {
         return node.guid
-      } else if (Array.isArray(node.guid) && node.guid[0] && node.guid[0]._) {
+      }
+      // Format: <guid>guid-value</guid>
+      // node.guid = ['guid-value'] (array with one element)
+      if (
+        Array.isArray(node.guid) &&
+        node.guid[0] &&
+        typeof node.guid[0] === 'string'
+      ) {
+        return node.guid[0]
+      }
+      // <guid attribute='attr-value'>guid-value</guid>
+      // node.guid = [{ _: 'guid-value', $: { attribute: 'attr-value' } }]
+      if (Array.isArray(node.guid) && node.guid[0] && node.guid[0]._) {
         return node.guid[0]._
       }
     }
@@ -431,6 +447,10 @@ const GET = (exports.GET = {
     }
 
     return finalItems
+  },
+
+  podcastGuid: function (node) {
+    return node[NS.podcastGuid]
   },
 
   soundbite: function (node) {
