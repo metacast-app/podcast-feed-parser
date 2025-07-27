@@ -614,9 +614,9 @@ const CLEAN = (exports.CLEAN = {
   },
 
   duration: function (arr) {
-    const durationValue = typeof arr[0] === 'object' ? arr[0]._ : arr[0]
+    const durationValue = extractValue(arr)
     if (!durationValue || durationValue === '') {
-      return undefined
+      return null
     }
 
     // gives duration in seconds
@@ -640,11 +640,13 @@ const CLEAN = (exports.CLEAN = {
     }
   },
 
-  explicit: function (inputObject) {
-    const string =
-      typeof inputObject[0] === 'object'
-        ? inputObject[0]._.toLowerCase()
-        : inputObject[0].toLowerCase()
+  explicit: function (inputArray) {
+    const value = extractValue(inputArray)
+    if (!value) {
+      return undefined
+    }
+
+    const string = value.toLowerCase()
 
     if (['yes', 'explicit', 'true'].indexOf(string) >= 0) {
       return true
@@ -672,6 +674,17 @@ const CLEAN = (exports.CLEAN = {
 
     return ownerObject
   }
+})
+
+const extractValue = (exports.extractValue = function (inputArray) {
+  // Helper function to extract values that might have namespace attributes
+  // Handles both simple strings and objects with _ property (namespace format)
+  if (!inputArray || !Array.isArray(inputArray) || inputArray.length === 0) {
+    return undefined
+  }
+
+  const firstItem = inputArray[0]
+  return typeof firstItem === 'object' ? firstItem._ : firstItem
 })
 
 const cleanDefault = (exports.cleanDefault = function (node) {
