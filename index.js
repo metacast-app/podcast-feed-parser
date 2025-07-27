@@ -614,8 +614,13 @@ const CLEAN = (exports.CLEAN = {
   },
 
   duration: function (arr) {
+    const durationValue = typeof arr[0] === 'object' ? arr[0]._ : arr[0]
+    if (!durationValue || durationValue === '') {
+      return undefined
+    }
+
     // gives duration in seconds
-    let times = arr[0].split(':'),
+    let times = durationValue.split(':'),
       sum = 0,
       mul = 1
 
@@ -635,10 +640,15 @@ const CLEAN = (exports.CLEAN = {
     }
   },
 
-  explicit: function (string) {
-    if (['yes', 'explicit', 'true'].indexOf(string[0].toLowerCase()) >= 0) {
+  explicit: function (inputObject) {
+    const string =
+      typeof inputObject[0] === 'object'
+        ? inputObject[0]._.toLowerCase()
+        : inputObject[0].toLowerCase()
+
+    if (['yes', 'explicit', 'true'].indexOf(string) >= 0) {
       return true
-    } else if (['clean', 'no', 'false'].indexOf(string[0].toLowerCase()) >= 0) {
+    } else if (['clean', 'no', 'false'].indexOf(string) >= 0) {
       return false
     } else {
       return undefined
