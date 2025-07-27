@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="stylesheet.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0">
+  <channel>
+    <atom:link rel="self" type="application/atom+xml" href="https://feeds.transistor.fm/builders-gonna-build" title="MP3 Audio"/>
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/"/>
+    <podcast:podping usesPodping="true"/>
+    <title>Builders Gonna Build</title>
+    <generator>Transistor (https://transistor.fm)</generator>
+    <itunes:new-feed-url>https://feeds.transistor.fm/builders-gonna-build</itunes:new-feed-url>
+    <description>Interviews with people who build awesome products, businesses and experiences. Hosted by Metacast co-founders Ilya Bezdelev and Arnab Deka.</description>
+    <copyright>Metacast Inc</copyright>
+    <podcast:guid>42d048c1-5dcd-5948-8146-13552235d854</podcast:guid>
+    <podcast:locked owner="hello@buildersgonnabuild.com">no</podcast:locked>
+    <language>en</language>
+    <pubDate>Fri, 21 Feb 2025 04:27:40 -0500</pubDate>
+    <lastBuildDate>Fri, 21 Feb 2025 04:28:09 -0500</lastBuildDate>
+    <link>https://metacast.app/builders-gonna-build</link>
+    <image>
+      <url>https://img.transistor.fm/TCf0WdRRgh7nZPvIKSF5jsexIXmo8HCQjVJ2qSkE9p0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9zaG93/LzUwOTAxLzE3MTAz/NTM3NTEtYXJ0d29y/ay5qcGc.jpg</url>
+      <title>Builders Gonna Build</title>
+      <link>https://metacast.app/builders-gonna-build</link>
+    </image>
+    <itunes:category text="Business">
+      <itunes:category text="Entrepreneurship"/>
+    </itunes:category>
+    <itunes:type>episodic</itunes:type>
+    <itunes:author>Metacast</itunes:author>
+    <itunes:image href="https://img.transistor.fm/TCf0WdRRgh7nZPvIKSF5jsexIXmo8HCQjVJ2qSkE9p0/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9zaG93/LzUwOTAxLzE3MTAz/NTM3NTEtYXJ0d29y/ay5qcGc.jpg"/>
+    <itunes:summary>Interviews with people who build awesome products, businesses and experiences. Hosted by Metacast co-founders Ilya Bezdelev and Arnab Deka.</itunes:summary>
+    <itunes:subtitle>Interviews with people who build awesome products, businesses and experiences.</itunes:subtitle>
+    <itunes:keywords></itunes:keywords>
+    <itunes:owner>
+      <itunes:name>Metacast</itunes:name>
+    </itunes:owner>
+    <itunes:complete>No</itunes:complete>
+    <itunes:explicit>No</itunes:explicit>
+    <item>
+      <title>8. Growing your LinkedIn and newsletter audience | John Crickett</title>
+      <itunes:season>2</itunes:season>
+      <podcast:season>2</podcast:season>
+      <itunes:episode>1</itunes:episode>
+      <podcast:episode>1</podcast:episode>
+      <itunes:title>8. Growing your LinkedIn and newsletter audience | John Crickett</itunes:title>
+      <itunes:episodeType>full</itunes:episodeType>
+      <guid isPermaLink="false">8bfde701-1e05-441b-ba12-5162cd61c82c</guid>
+      <link>https://www.buildersgonnabuild.com/p/008-john-crickett-linkedin-newsletter-audience</link>
+      <description>
+        <![CDATA[<p>John Crickett is the creator of Coding Challenges, a newsletter for engineers that has over 54k subscribers. John’s LinkedIn profile grew from 3k to 150k+ followers in a year. In this episode, we dive into the process and mindset that allowed John’s following to grow so quickly.</p><p><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep8&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><br><strong>Segments</strong></p><ul><li>[00:58] Introduction</li><li>[03:18] Spending a million Euros and a year on an MVP</li><li>[05:54] Coding Challenges</li><li>[08:15] MVP for an info product vs. software</li><li>[13:51] Growth on LinkedIn</li><li>[17:32] Post structure</li><li>[19:48] Comments on posts</li><li>[21:48] Twitter/X</li><li>[25:15] Coding Challenges newsletter</li><li>[27:12] Building a personal brand</li><li>[34:09] Nicheing on LinkedIn</li><li>[41:50] Selling B2B vs. B2C</li><li>[47:18] Tangent on car salesmen</li><li>[50:13] Book recommendations</li></ul><p><br></p><p><strong>Where to find John</strong></p><ul><li><a href="https://www.linkedin.com/in/johncrickett/">John’s LinkedIn</a></li><li><a href="https://codingchallenges.fyi/">Coding Challenges</a></li><li><a href="https://codingchallenges.substack.com/">Coding Challenges newsletter</a></li><li><a href="https://metacast.app/podcasts/cf1ae98a-5a00-5896-93af-e3e2b3874442">Coding Chats podcast</a></li><li><a href="https://johncrickett.gumroad.com/l/30day-li-challenge">30 Day LinkedIn Personal Branding Challenge for Software Engineers</a> (starts on May 20, 2024!)</li></ul><p><br><strong>Links </strong></p><ul><li><a href="https://adventofcode.com/">Advent of Code</a></li><li><a href="https://carrd.co/">Carrd website builder</a></li><li><a href="https://www.air.chat/">AirChat</a></li></ul><p><br><strong>Podcasts</strong></p><ul><li><a href="https://metacast.app/podcasts/4fe69a3b-88d1-5e22-8fe4-bba096831944">My First Million</a> (<a href="https://metacast.app/podcasts/episode/4fe69a3b_88d1_5e22_8fe4_bba096831944_00d3f378_d1bc_11ee_a768_3f32da5b55c1">Jason Cohen episode</a>)</li></ul><p><br><strong>Books</strong></p><ul><li><a href="https://amzn.to/44wFDQZ">Stop Asking Questions</a> by Andrew Warner</li><li><a href="https://amzn.to/44BJFaU">Hatching Twitter</a> by Nick Bilton</li></ul><p><br><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep8">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep8">metacastpodcast.com</a></li></ul>]]>
+      </description>
+      <content:encoded>
+        <![CDATA[<p>John Crickett is the creator of Coding Challenges, a newsletter for engineers that has over 54k subscribers. John’s LinkedIn profile grew from 3k to 150k+ followers in a year. In this episode, we dive into the process and mindset that allowed John’s following to grow so quickly.</p><p><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep8&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><br><strong>Segments</strong></p><ul><li>[00:58] Introduction</li><li>[03:18] Spending a million Euros and a year on an MVP</li><li>[05:54] Coding Challenges</li><li>[08:15] MVP for an info product vs. software</li><li>[13:51] Growth on LinkedIn</li><li>[17:32] Post structure</li><li>[19:48] Comments on posts</li><li>[21:48] Twitter/X</li><li>[25:15] Coding Challenges newsletter</li><li>[27:12] Building a personal brand</li><li>[34:09] Nicheing on LinkedIn</li><li>[41:50] Selling B2B vs. B2C</li><li>[47:18] Tangent on car salesmen</li><li>[50:13] Book recommendations</li></ul><p><br></p><p><strong>Where to find John</strong></p><ul><li><a href="https://www.linkedin.com/in/johncrickett/">John’s LinkedIn</a></li><li><a href="https://codingchallenges.fyi/">Coding Challenges</a></li><li><a href="https://codingchallenges.substack.com/">Coding Challenges newsletter</a></li><li><a href="https://metacast.app/podcasts/cf1ae98a-5a00-5896-93af-e3e2b3874442">Coding Chats podcast</a></li><li><a href="https://johncrickett.gumroad.com/l/30day-li-challenge">30 Day LinkedIn Personal Branding Challenge for Software Engineers</a> (starts on May 20, 2024!)</li></ul><p><br><strong>Links </strong></p><ul><li><a href="https://adventofcode.com/">Advent of Code</a></li><li><a href="https://carrd.co/">Carrd website builder</a></li><li><a href="https://www.air.chat/">AirChat</a></li></ul><p><br><strong>Podcasts</strong></p><ul><li><a href="https://metacast.app/podcasts/4fe69a3b-88d1-5e22-8fe4-bba096831944">My First Million</a> (<a href="https://metacast.app/podcasts/episode/4fe69a3b_88d1_5e22_8fe4_bba096831944_00d3f378_d1bc_11ee_a768_3f32da5b55c1">Jason Cohen episode</a>)</li></ul><p><br><strong>Books</strong></p><ul><li><a href="https://amzn.to/44wFDQZ">Stop Asking Questions</a> by Andrew Warner</li><li><a href="https://amzn.to/44BJFaU">Hatching Twitter</a> by Nick Bilton</li></ul><p><br><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep8">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep8">metacastpodcast.com</a></li></ul>]]>
+      </content:encoded>
+      <pubDate>Thu, 09 May 2024 10:09:39 -0400</pubDate>
+      <author>Metacast</author>
+      <enclosure url="https://media.transistor.fm/ecba13c6/f721e322.mp3" length="77600767" type="audio/mpeg"/>
+      <itunes:author>Metacast</itunes:author>
+      <itunes:image href="https://img.transistor.fm/AWt3n5BBrEQmozXQNL-SrDOh2KljK2AvqmAo2nuGrxo/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9iMWZk/M2IwOTg5OWNiZDlh/Y2ViNDcwODA5ZmEy/ZTI1ZS5wbmc.jpg"/>
+      <itunes:duration>3233</itunes:duration>
+      <itunes:summary>
+        <![CDATA[<p>John Crickett is the creator of Coding Challenges, a newsletter for engineers that has over 54k subscribers. John’s LinkedIn profile grew from 3k to 150k+ followers in a year. In this episode, we dive into the process and mindset that allowed John’s following to grow so quickly.</p><p><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep8&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><br><strong>Segments</strong></p><ul><li>[00:58] Introduction</li><li>[03:18] Spending a million Euros and a year on an MVP</li><li>[05:54] Coding Challenges</li><li>[08:15] MVP for an info product vs. software</li><li>[13:51] Growth on LinkedIn</li><li>[17:32] Post structure</li><li>[19:48] Comments on posts</li><li>[21:48] Twitter/X</li><li>[25:15] Coding Challenges newsletter</li><li>[27:12] Building a personal brand</li><li>[34:09] Nicheing on LinkedIn</li><li>[41:50] Selling B2B vs. B2C</li><li>[47:18] Tangent on car salesmen</li><li>[50:13] Book recommendations</li></ul><p><br></p><p><strong>Where to find John</strong></p><ul><li><a href="https://www.linkedin.com/in/johncrickett/">John’s LinkedIn</a></li><li><a href="https://codingchallenges.fyi/">Coding Challenges</a></li><li><a href="https://codingchallenges.substack.com/">Coding Challenges newsletter</a></li><li><a href="https://metacast.app/podcasts/cf1ae98a-5a00-5896-93af-e3e2b3874442">Coding Chats podcast</a></li><li><a href="https://johncrickett.gumroad.com/l/30day-li-challenge">30 Day LinkedIn Personal Branding Challenge for Software Engineers</a> (starts on May 20, 2024!)</li></ul><p><br><strong>Links </strong></p><ul><li><a href="https://adventofcode.com/">Advent of Code</a></li><li><a href="https://carrd.co/">Carrd website builder</a></li><li><a href="https://www.air.chat/">AirChat</a></li></ul><p><br><strong>Podcasts</strong></p><ul><li><a href="https://metacast.app/podcasts/4fe69a3b-88d1-5e22-8fe4-bba096831944">My First Million</a> (<a href="https://metacast.app/podcasts/episode/4fe69a3b_88d1_5e22_8fe4_bba096831944_00d3f378_d1bc_11ee_a768_3f32da5b55c1">Jason Cohen episode</a>)</li></ul><p><br><strong>Books</strong></p><ul><li><a href="https://amzn.to/44wFDQZ">Stop Asking Questions</a> by Andrew Warner</li><li><a href="https://amzn.to/44BJFaU">Hatching Twitter</a> by Nick Bilton</li></ul><p><br><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep8">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep8">metacastpodcast.com</a></li></ul>]]>
+      </itunes:summary>
+      <itunes:keywords></itunes:keywords>
+      <itunes:explicit>No</itunes:explicit>
+    </item>
+    <item>
+      <title>7. Jason Fried on building products, calm companies and the Jeff Bezos investment</title>
+      <itunes:season>1</itunes:season>
+      <podcast:season>1</podcast:season>
+      <itunes:episode>7</itunes:episode>
+      <podcast:episode>7</podcast:episode>
+      <itunes:title>7. Jason Fried on building products, calm companies and the Jeff Bezos investment</itunes:title>
+      <itunes:episodeType>full</itunes:episodeType>
+      <guid isPermaLink="false">668ab43f-5a22-43c3-9580-c4420abf3060</guid>
+      <link>https://www.buildersgonnabuild.com/p/007-jason-fried-37signals</link>
+      <description>
+        <![CDATA[<p>Jason Fried is a co-founder and CEO of 37signals, the company behind Basecamp and HEY. Together with his business partner David Hannemeier Hanson, Jason co-authored seminal entrepreneurship books Rework, Remote, and It Doesn't Have to Be Crazy at Work.</p><p>This episode was originally published on the Metacast podcast, <a href="https://www.metacastpodcast.com/p/028-jason-fried">episode 28</a> in July 2023.</p><p><br><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep7&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><strong>Segments</strong></p><ul><li>[03:17] Introduction of Jason and 37signals </li><li>[05:38] Founder role vs. CEO role </li><li>[08:37] Working with the same co-founder for 20 years </li><li>[11:10] Disagreements between founders </li><li>[13:31] Disagree and commit principle </li><li>[15:14] The business side of things (numbers, accounting, etc.) </li><li>[18:17] On costs and profitability </li><li>[21:01] Intentionally keeping the company small </li><li>[24:01] Managing risk </li><li>[26:11] Jeff Bezos’ investment </li><li>[32:34] Working on several products at the same time </li><li>[33:31] Six-week cycles vs. long-term projects </li><li>[38:50] Evolution of 37signals </li><li>[44:45] Keeping products until the end of the Internet </li><li>[47:28] Calm companies </li><li>[48:38] Listening to customer feedback </li><li>[54:25] Jason's email is public. Is this a good idea? </li><li>[58:07] Employee performance reviews and fixed salaries </li><li>[59:45] Can the "calm company" mindset work in big companies? </li><li>[01:05:51] How does one find a calm company to work for? </li><li>[01:08:46] Publishing books </li><li>[01:11:38] On being contrarian and no politics at work </li></ul><p><strong>Podcasts</strong></p><ul><li><a href="https://37signals.com/podcast/">Rework</a></li><li><a href="https://podcasts.apple.com/us/podcast/496-marc-randolph-on-building-netflix-battling-blockbuster/id863897795?i=1000507311407">#496: Marc Randolph on Building Netflix, Battling Blockbuster, Negotiating with Amazon/Bezos, and Scraping the Barnacles Off the Hull</a> on The Tim Ferriss Show</li></ul><p><strong>Books</strong></p><ul><li><a href="https://amzn.to/3Ov5pPd">Rework</a></li><li><a href="https://amzn.to/44EzNfG">Getting Real</a></li><li><a href="https://amzn.to/44YEdNX">It Doesn’t Have to Be Crazy at Work</a></li><li><a href="https://basecamp.com/shapeup">Shape Up</a></li><li><a href="https://amzn.to/44Zq6If">Maverick</a> by Ricardo Semler</li></ul><p><strong>Blog posts</strong></p><ul><li><a href="https://world.hey.com/jason/founder-ceo-is-kinda-a-bs-title-9fe101e9">Founder &amp; CEO is kinda a BS title</a> by Jason Fried</li><li><a href="https://world.hey.com/dhh/basecamp-s-new-etiquette-regarding-societal-politics-at-work-b44bef69">Basecamp's new etiquette regarding societal politics at work</a> by DHH</li><li><a href="https://world.hey.com/dhh/but-what-if-you-re-wrong-6de2168c">But what if you're wrong?</a> by DHH</li></ul><p><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep7">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep7">metacastpodcast.com</a></li></ul>]]>
+      </description>
+      <content:encoded>
+        <![CDATA[<p>Jason Fried is a co-founder and CEO of 37signals, the company behind Basecamp and HEY. Together with his business partner David Hannemeier Hanson, Jason co-authored seminal entrepreneurship books Rework, Remote, and It Doesn't Have to Be Crazy at Work.</p><p>This episode was originally published on the Metacast podcast, <a href="https://www.metacastpodcast.com/p/028-jason-fried">episode 28</a> in July 2023.</p><p><br><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep7&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><strong>Segments</strong></p><ul><li>[03:17] Introduction of Jason and 37signals </li><li>[05:38] Founder role vs. CEO role </li><li>[08:37] Working with the same co-founder for 20 years </li><li>[11:10] Disagreements between founders </li><li>[13:31] Disagree and commit principle </li><li>[15:14] The business side of things (numbers, accounting, etc.) </li><li>[18:17] On costs and profitability </li><li>[21:01] Intentionally keeping the company small </li><li>[24:01] Managing risk </li><li>[26:11] Jeff Bezos’ investment </li><li>[32:34] Working on several products at the same time </li><li>[33:31] Six-week cycles vs. long-term projects </li><li>[38:50] Evolution of 37signals </li><li>[44:45] Keeping products until the end of the Internet </li><li>[47:28] Calm companies </li><li>[48:38] Listening to customer feedback </li><li>[54:25] Jason's email is public. Is this a good idea? </li><li>[58:07] Employee performance reviews and fixed salaries </li><li>[59:45] Can the "calm company" mindset work in big companies? </li><li>[01:05:51] How does one find a calm company to work for? </li><li>[01:08:46] Publishing books </li><li>[01:11:38] On being contrarian and no politics at work </li></ul><p><strong>Podcasts</strong></p><ul><li><a href="https://37signals.com/podcast/">Rework</a></li><li><a href="https://podcasts.apple.com/us/podcast/496-marc-randolph-on-building-netflix-battling-blockbuster/id863897795?i=1000507311407">#496: Marc Randolph on Building Netflix, Battling Blockbuster, Negotiating with Amazon/Bezos, and Scraping the Barnacles Off the Hull</a> on The Tim Ferriss Show</li></ul><p><strong>Books</strong></p><ul><li><a href="https://amzn.to/3Ov5pPd">Rework</a></li><li><a href="https://amzn.to/44EzNfG">Getting Real</a></li><li><a href="https://amzn.to/44YEdNX">It Doesn’t Have to Be Crazy at Work</a></li><li><a href="https://basecamp.com/shapeup">Shape Up</a></li><li><a href="https://amzn.to/44Zq6If">Maverick</a> by Ricardo Semler</li></ul><p><strong>Blog posts</strong></p><ul><li><a href="https://world.hey.com/jason/founder-ceo-is-kinda-a-bs-title-9fe101e9">Founder &amp; CEO is kinda a BS title</a> by Jason Fried</li><li><a href="https://world.hey.com/dhh/basecamp-s-new-etiquette-regarding-societal-politics-at-work-b44bef69">Basecamp's new etiquette regarding societal politics at work</a> by DHH</li><li><a href="https://world.hey.com/dhh/but-what-if-you-re-wrong-6de2168c">But what if you're wrong?</a> by DHH</li></ul><p><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep7">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep7">metacastpodcast.com</a></li></ul>]]>
+      </content:encoded>
+      <pubDate>Wed, 24 Apr 2024 03:03:00 -0400</pubDate>
+      <author>Metacast</author>
+      <enclosure url="https://media.transistor.fm/2d0a4835/6f0749d3.mp3" length="108906982" type="audio/mpeg"/>
+      <itunes:author>Metacast</itunes:author>
+      <itunes:image href="https://img.transistor.fm/zvug0txXZQ-Vo-2k6fPeWa3mjleO1WcWTQYRVt3RoW8/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS8zNTVk/MDVkODU1ODlkYjBm/ZTI0YTNlMzIxNmMz/MThkMS5wbmc.jpg"/>
+      <itunes:duration>4537</itunes:duration>
+      <itunes:summary>
+        <![CDATA[<p>Jason Fried is a co-founder and CEO of 37signals, the company behind Basecamp and HEY. Together with his business partner David Hannemeier Hanson, Jason co-authored seminal entrepreneurship books Rework, Remote, and It Doesn't Have to Be Crazy at Work.</p><p>This episode was originally published on the Metacast podcast, <a href="https://www.metacastpodcast.com/p/028-jason-fried">episode 28</a> in July 2023.</p><p><br><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep7&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><strong>Segments</strong></p><ul><li>[03:17] Introduction of Jason and 37signals </li><li>[05:38] Founder role vs. CEO role </li><li>[08:37] Working with the same co-founder for 20 years </li><li>[11:10] Disagreements between founders </li><li>[13:31] Disagree and commit principle </li><li>[15:14] The business side of things (numbers, accounting, etc.) </li><li>[18:17] On costs and profitability </li><li>[21:01] Intentionally keeping the company small </li><li>[24:01] Managing risk </li><li>[26:11] Jeff Bezos’ investment </li><li>[32:34] Working on several products at the same time </li><li>[33:31] Six-week cycles vs. long-term projects </li><li>[38:50] Evolution of 37signals </li><li>[44:45] Keeping products until the end of the Internet </li><li>[47:28] Calm companies </li><li>[48:38] Listening to customer feedback </li><li>[54:25] Jason's email is public. Is this a good idea? </li><li>[58:07] Employee performance reviews and fixed salaries </li><li>[59:45] Can the "calm company" mindset work in big companies? </li><li>[01:05:51] How does one find a calm company to work for? </li><li>[01:08:46] Publishing books </li><li>[01:11:38] On being contrarian and no politics at work </li></ul><p><strong>Podcasts</strong></p><ul><li><a href="https://37signals.com/podcast/">Rework</a></li><li><a href="https://podcasts.apple.com/us/podcast/496-marc-randolph-on-building-netflix-battling-blockbuster/id863897795?i=1000507311407">#496: Marc Randolph on Building Netflix, Battling Blockbuster, Negotiating with Amazon/Bezos, and Scraping the Barnacles Off the Hull</a> on The Tim Ferriss Show</li></ul><p><strong>Books</strong></p><ul><li><a href="https://amzn.to/3Ov5pPd">Rework</a></li><li><a href="https://amzn.to/44EzNfG">Getting Real</a></li><li><a href="https://amzn.to/44YEdNX">It Doesn’t Have to Be Crazy at Work</a></li><li><a href="https://basecamp.com/shapeup">Shape Up</a></li><li><a href="https://amzn.to/44Zq6If">Maverick</a> by Ricardo Semler</li></ul><p><strong>Blog posts</strong></p><ul><li><a href="https://world.hey.com/jason/founder-ceo-is-kinda-a-bs-title-9fe101e9">Founder &amp; CEO is kinda a BS title</a> by Jason Fried</li><li><a href="https://world.hey.com/dhh/basecamp-s-new-etiquette-regarding-societal-politics-at-work-b44bef69">Basecamp's new etiquette regarding societal politics at work</a> by DHH</li><li><a href="https://world.hey.com/dhh/but-what-if-you-re-wrong-6de2168c">But what if you're wrong?</a> by DHH</li></ul><p><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep7">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep7">metacastpodcast.com</a></li></ul>]]>
+      </itunes:summary>
+      <itunes:keywords></itunes:keywords>
+      <itunes:explicit>No</itunes:explicit>
+    </item>
+    <item>
+      <title>6. Creating a niche of your own | Corey Quinn, The Duckbill Group</title>
+      <itunes:season>1</itunes:season>
+      <podcast:season>1</podcast:season>
+      <itunes:episode>6</itunes:episode>
+      <podcast:episode>6</podcast:episode>
+      <itunes:title>6. Creating a niche of your own | Corey Quinn, The Duckbill Group</itunes:title>
+      <itunes:episodeType>full</itunes:episodeType>
+      <guid isPermaLink="false">505085c1-9255-4351-81d0-78bfffb6c33a</guid>
+      <link>https://www.buildersgonnabuild.com/p/006-corey-quinn-chief-cloud-economist?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6</link>
+      <description>
+        <![CDATA[<p>Corey Quinn is the Chief Cloud Economist at The Duckbill Group and a big celebrity at the AWS circles well known for his sense of humor and unrelenting focus on making some good fun of the cloud providers.</p><p>In our interview, we are learning Corey’s background, how The Duckbill Group got started, and how he runs the media side of his business. As usual, we talked about bootstrapping and running consulting services while building a product.</p><p>This episode was originally published on the Metacast podcast, <a href="https://www.metacastpodcast.com/p/032-corey-quinn/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6">episode 32</a>.</p><p><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><strong>Where to find Corey</strong></p><ul><li><a href="https://www.lastweekinaws.com/podcast/screaming-in-the-cloud/">Screaming in the Cloud</a> (podcast)</li><li><a href="https://www.lastweekinaws.com/newsletter/">Last week in AWS</a> (newsletter)</li><li><a href="https://www.lastweekinaws.com/podcast/aws-morning-brief/">AWS Morning Brief</a> (podcast)</li><li>X: <a href="https://twitter.com/QuinnyPig">@QuinnyPig</a></li><li><a href="https://duckbillgroup.com/">Duckbill Group</a></li></ul><p><strong>Books</strong></p><ul><li><a href="https://amzn.to/3E9e3wA">Practical Monitoring: Effective Strategies for the Real World</a> by Mike Julian</li><li><a href="https://amzn.to/3YNuHeE">Never Eat Alone</a> by Tahl Raz Keith Ferrazzi</li></ul><p><strong>Other references</strong></p><ul><li><a href="https://www.lastweekinaws.com/blog/route-53-amazons-premier-database/">Route 53, Amazon’s Premier Database</a></li><li><a href="https://www.lastweekinaws.com/podcast/screaming-in-the-cloud/writing-new-editions-and-ticking-all-the-boxes-with-andreas-wittig/">Writing New Editions and Ticking All the Boxes with Andreas Wittig</a></li><li><a href="https://www.metacastpodcast.com/p/008-squadcast-founders-zach-moreno-rock-felder">Metacast Ep. 8 - SquadCast Founders on Remote Collaboration in Podcasts</a></li><li><a href="https://www.infoq.com/presentations/testing-production-2018/">Yes, I Test in Production (And So Do You)</a> by Charity Majors</li></ul><p><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6">metacastpodcast.com</a></li></ul>]]>
+      </description>
+      <content:encoded>
+        <![CDATA[<p>Corey Quinn is the Chief Cloud Economist at The Duckbill Group and a big celebrity at the AWS circles well known for his sense of humor and unrelenting focus on making some good fun of the cloud providers.</p><p>In our interview, we are learning Corey’s background, how The Duckbill Group got started, and how he runs the media side of his business. As usual, we talked about bootstrapping and running consulting services while building a product.</p><p>This episode was originally published on the Metacast podcast, <a href="https://www.metacastpodcast.com/p/032-corey-quinn/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6">episode 32</a>.</p><p><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><strong>Where to find Corey</strong></p><ul><li><a href="https://www.lastweekinaws.com/podcast/screaming-in-the-cloud/">Screaming in the Cloud</a> (podcast)</li><li><a href="https://www.lastweekinaws.com/newsletter/">Last week in AWS</a> (newsletter)</li><li><a href="https://www.lastweekinaws.com/podcast/aws-morning-brief/">AWS Morning Brief</a> (podcast)</li><li>X: <a href="https://twitter.com/QuinnyPig">@QuinnyPig</a></li><li><a href="https://duckbillgroup.com/">Duckbill Group</a></li></ul><p><strong>Books</strong></p><ul><li><a href="https://amzn.to/3E9e3wA">Practical Monitoring: Effective Strategies for the Real World</a> by Mike Julian</li><li><a href="https://amzn.to/3YNuHeE">Never Eat Alone</a> by Tahl Raz Keith Ferrazzi</li></ul><p><strong>Other references</strong></p><ul><li><a href="https://www.lastweekinaws.com/blog/route-53-amazons-premier-database/">Route 53, Amazon’s Premier Database</a></li><li><a href="https://www.lastweekinaws.com/podcast/screaming-in-the-cloud/writing-new-editions-and-ticking-all-the-boxes-with-andreas-wittig/">Writing New Editions and Ticking All the Boxes with Andreas Wittig</a></li><li><a href="https://www.metacastpodcast.com/p/008-squadcast-founders-zach-moreno-rock-felder">Metacast Ep. 8 - SquadCast Founders on Remote Collaboration in Podcasts</a></li><li><a href="https://www.infoq.com/presentations/testing-production-2018/">Yes, I Test in Production (And So Do You)</a> by Charity Majors</li></ul><p><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6">metacastpodcast.com</a></li></ul>]]>
+      </content:encoded>
+      <pubDate>Wed, 10 Apr 2024 03:30:00 -0400</pubDate>
+      <author>Metacast</author>
+      <enclosure url="https://media.transistor.fm/ccc78d60/08a89739.mp3" length="107966623" type="audio/mpeg"/>
+      <itunes:author>Metacast</itunes:author>
+      <itunes:image href="https://img.transistor.fm/ADLKnhdJrfYyHHsUF6vI2UVCVxJvrJoBmc7LFyUbiWQ/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS85ZTlm/ODJkMmU5YjljM2Q4/NTEzNjRmMWQ5M2E3/ZDYxYS5wbmc.jpg"/>
+      <itunes:duration>4498</itunes:duration>
+      <itunes:summary>
+        <![CDATA[<p>Corey Quinn is the Chief Cloud Economist at The Duckbill Group and a big celebrity at the AWS circles well known for his sense of humor and unrelenting focus on making some good fun of the cloud providers.</p><p>In our interview, we are learning Corey’s background, how The Duckbill Group got started, and how he runs the media side of his business. As usual, we talked about bootstrapping and running consulting services while building a product.</p><p>This episode was originally published on the Metacast podcast, <a href="https://www.metacastpodcast.com/p/032-corey-quinn/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6">episode 32</a>.</p><p><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><strong>Where to find Corey</strong></p><ul><li><a href="https://www.lastweekinaws.com/podcast/screaming-in-the-cloud/">Screaming in the Cloud</a> (podcast)</li><li><a href="https://www.lastweekinaws.com/newsletter/">Last week in AWS</a> (newsletter)</li><li><a href="https://www.lastweekinaws.com/podcast/aws-morning-brief/">AWS Morning Brief</a> (podcast)</li><li>X: <a href="https://twitter.com/QuinnyPig">@QuinnyPig</a></li><li><a href="https://duckbillgroup.com/">Duckbill Group</a></li></ul><p><strong>Books</strong></p><ul><li><a href="https://amzn.to/3E9e3wA">Practical Monitoring: Effective Strategies for the Real World</a> by Mike Julian</li><li><a href="https://amzn.to/3YNuHeE">Never Eat Alone</a> by Tahl Raz Keith Ferrazzi</li></ul><p><strong>Other references</strong></p><ul><li><a href="https://www.lastweekinaws.com/blog/route-53-amazons-premier-database/">Route 53, Amazon’s Premier Database</a></li><li><a href="https://www.lastweekinaws.com/podcast/screaming-in-the-cloud/writing-new-editions-and-ticking-all-the-boxes-with-andreas-wittig/">Writing New Editions and Ticking All the Boxes with Andreas Wittig</a></li><li><a href="https://www.metacastpodcast.com/p/008-squadcast-founders-zach-moreno-rock-felder">Metacast Ep. 8 - SquadCast Founders on Remote Collaboration in Podcasts</a></li><li><a href="https://www.infoq.com/presentations/testing-production-2018/">Yes, I Test in Production (And So Do You)</a> by Charity Majors</li></ul><p><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com/?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep6">metacastpodcast.com</a></li></ul>]]>
+      </itunes:summary>
+      <itunes:keywords></itunes:keywords>
+      <itunes:explicit>No</itunes:explicit>
+    </item>
+    <item>
+      <title>5. Don't do agile, be agile | Co-author of Agile Manifesto and Pragmatic Programmer | Dave Thomas</title>
+      <itunes:season>1</itunes:season>
+      <podcast:season>1</podcast:season>
+      <itunes:episode>5</itunes:episode>
+      <podcast:episode>5</podcast:episode>
+      <itunes:title>5. Don't do agile, be agile | Co-author of Agile Manifesto and Pragmatic Programmer | Dave Thomas</itunes:title>
+      <itunes:episodeType>full</itunes:episodeType>
+      <guid isPermaLink="false">325c6652-22b3-4d8d-ae50-d6e5b52981f9</guid>
+      <link>https://www.buildersgonnabuild.com/p/005-dave-thomas-agile-manifesto</link>
+      <description>
+        <![CDATA[<p>Dave Thomas, co-author of The Pragmatic Programmer and Agile Manifesto, on the true spirit of being agile (vs. "doing agile"), mistakes engineering teams make, and common practices of successful teams.</p><p><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep5&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><strong>Segments</strong><br>[10:29] The genesis of The Pragmatic Programmer<br>[11:41] People don't know what they want, importance of feedback loops<br>[22:17] Doing Agile vs. being agile<br>[26:36] Practices of successful engineering teams<br>[36:35] Being pragmatic at an early stage startup<br>[44:10] Things that are still true 24 years after the book was published<br>[55:25] How does a book define its author's identity?</p><p><strong>Show notes</strong></p><ul><li><a href="https://amzn.to/47ewEnU">The Pragmatic Programmer</a></li><li><a href="https://pragprog.com/">The Pragmatic Bookshelf</a></li><li><a href="https://agilemanifesto.org/">The Agile Manifesto</a></li></ul><p><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep5&amp;utm_content=app_promo">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep5&amp;utm_content=app_promo">metacastpodcast.com</a></li></ul>]]>
+      </description>
+      <content:encoded>
+        <![CDATA[<p>Dave Thomas, co-author of The Pragmatic Programmer and Agile Manifesto, on the true spirit of being agile (vs. "doing agile"), mistakes engineering teams make, and common practices of successful teams.</p><p><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep5&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><strong>Segments</strong><br>[10:29] The genesis of The Pragmatic Programmer<br>[11:41] People don't know what they want, importance of feedback loops<br>[22:17] Doing Agile vs. being agile<br>[26:36] Practices of successful engineering teams<br>[36:35] Being pragmatic at an early stage startup<br>[44:10] Things that are still true 24 years after the book was published<br>[55:25] How does a book define its author's identity?</p><p><strong>Show notes</strong></p><ul><li><a href="https://amzn.to/47ewEnU">The Pragmatic Programmer</a></li><li><a href="https://pragprog.com/">The Pragmatic Bookshelf</a></li><li><a href="https://agilemanifesto.org/">The Agile Manifesto</a></li></ul><p><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep5&amp;utm_content=app_promo">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep5&amp;utm_content=app_promo">metacastpodcast.com</a></li></ul>]]>
+      </content:encoded>
+      <pubDate>Wed, 13 Mar 2024 14:43:05 -0400</pubDate>
+      <author>Metacast</author>
+      <enclosure url="https://media.transistor.fm/2b1b7344/908f8f34.mp3" length="85365955" type="audio/mpeg"/>
+      <itunes:author>Metacast</itunes:author>
+      <itunes:image href="https://img.transistor.fm/WXN4LDGAkIefvbIO1wJPTlv8DAylW9WSpTKqN4svr0Q/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzE3ODg2Mjcv/MTcxMDM1NTM4NS1h/cnR3b3JrLmpwZw.jpg"/>
+      <itunes:duration>3556</itunes:duration>
+      <itunes:summary>
+        <![CDATA[<p>Dave Thomas, co-author of The Pragmatic Programmer and Agile Manifesto, on the true spirit of being agile (vs. "doing agile"), mistakes engineering teams make, and common practices of successful teams.</p><p><strong>Do you love audio podcasts?</strong></p><ul><li>Try Metacast podcast app at <a href="https://metacast.app?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep5&amp;utm_content=app_promo">metacast.app</a>.</li><li>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">r/metacastapp</a>.</li></ul><p><strong>Segments</strong><br>[10:29] The genesis of The Pragmatic Programmer<br>[11:41] People don't know what they want, importance of feedback loops<br>[22:17] Doing Agile vs. being agile<br>[26:36] Practices of successful engineering teams<br>[36:35] Being pragmatic at an early stage startup<br>[44:10] Things that are still true 24 years after the book was published<br>[55:25] How does a book define its author's identity?</p><p><strong>Show notes</strong></p><ul><li><a href="https://amzn.to/47ewEnU">The Pragmatic Programmer</a></li><li><a href="https://pragprog.com/">The Pragmatic Bookshelf</a></li><li><a href="https://agilemanifesto.org/">The Agile Manifesto</a></li></ul><p><strong>Get in touch!</strong></p><ul><li>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">hello@buildersgonnabuild.com</a></li><li>Subscribe to newsletter at <a href="https://www.buildersgonnabuild.com?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep5&amp;utm_content=app_promo">buildersgonnabuild.com</a></li><li>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.metacastpodcast.com?utm_source=podcast&amp;utm_medium=rss&amp;utm_campaign=bgb_ep5&amp;utm_content=app_promo">metacastpodcast.com</a></li></ul>]]>
+      </itunes:summary>
+      <itunes:keywords>software engineering, programming, agile, scrum</itunes:keywords>
+      <itunes:explicit>No</itunes:explicit>
+      <podcast:chapters url="https://share.transistor.fm/s/2b1b7344/chapters.json" type="application/json+chapters"/>
+    </item>
+    <item>
+      <title>4. Henry T. Kirk, entrepreneur, ex-engineer at Google &amp; Amazon</title>
+      <itunes:season>1</itunes:season>
+      <podcast:season>1</podcast:season>
+      <itunes:episode>4</itunes:episode>
+      <podcast:episode>4</podcast:episode>
+      <itunes:title>4. Henry T. Kirk, entrepreneur, ex-engineer at Google &amp; Amazon</itunes:title>
+      <itunes:episodeType>full</itunes:episodeType>
+      <guid isPermaLink="false">e39e718f-1077-4120-9820-893cecbd7b76</guid>
+      <link>https://share.transistor.fm/s/a30f0dac</link>
+      <description>
+        <![CDATA[<p>For 10 years, Henry built mobile apps at Google and Amazon. Now he is a partner at a software development agency <a href="https://www.studioinit.co/" rel="noopener noreferrer nofollow">studio.init()</a>. Henry shares his thoughts on using cross-platform frameworks vs. native languages, argues that Apple’s 30% cut of the in-app purchases is acceptable, and tells us how Google layoffs became a blessing in disguise. </p>
+<p><strong>Do you love audio podcasts?</strong></p>
+<p>Try Metacast podcast app at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbU5uOU1kZjlpcEloTEZLQktRV1dXSGJwMmRNd3xBQ3Jtc0tsVENCUVkwVzJSa3A5T1AwTzVkR3AwWERiem1FUWtmTDV3bnJDNVlodlpBV1RWalUyMXFhWEVRVi1rYTl2NENkUUI1Y0JLaDNkT3dPbFphdjlyU2plVE40M2pSdXUwb0tRcWVFQVo4LW9JSmVqbEQ5aw&amp;q=https%3A%2F%2Fmetacast.app%2F&amp;v=uEDDRmO7Tew">⁠⁠⁠⁠https://metacast.app⁠⁠⁠⁠</a>.</p>
+<p>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">⁠⁠⁠r/metacastapp⁠⁠⁠</a>.</p>
+<p><strong>Segments</strong></p>
+<p>[01:31] Introduction</p>
+<p>[04:03] Viral LinkedIn posts about layoffs</p>
+<p>[08:13] Google layoffs</p>
+<p>[17:36] Cross-platform app development with Flutter vs. native languages</p>
+<p>[30:12] Getting apps into app stores</p>
+<p>[31:43] Apple's 30% in-app purchase fees</p>
+<p>[42:09] Building apps within Google and Amazon</p>
+<p>[50:30] Starting studio.init() and finding first customers</p>
+<p>[56:58] Book recommendations</p>
+<p><strong>Show notes</strong></p>
+<p>Where to find Henry</p>
+<ul>
+ <li><p><a href="https://www.linkedin.com/in/henrytkirk/" rel="noopener noreferrer nofollow">LinkedIn</a></p>
+</li>
+ <li><p><a href="https://www.studioinit.co/" rel="noopener noreferrer nofollow">studio.init()</a></p>
+</li>
+</ul>
+<p>Books</p>
+<ul>
+ <li><p><a href="https://amzn.to/42Xm8Qz" rel="noopener noreferrer nofollow">Permission to Screw Up</a> by Kristen Hadeed</p>
+</li>
+ <li><p><a href="https://amzn.to/3wBmEYI" rel="noopener noreferrer nofollow">Crucial Conversations</a></p>
+</li>
+  <li><p><a href="https://amzn.to/49s09nB" rel="noopener noreferrer nofollow">Getting More</a> by Stuart Diamond</p>
+</li>
+  <li><p><a href="https://amzn.to/48wctSj" rel="noopener noreferrer nofollow">The New One Minute Manager</a> by Ken Blanchard, Spencer Johnson</p>
+</li>
+</ul>
+<p><strong>Do you love audio podcasts?</strong></p>
+<p>Try Metacast podcast app at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbU5uOU1kZjlpcEloTEZLQktRV1dXSGJwMmRNd3xBQ3Jtc0tsVENCUVkwVzJSa3A5T1AwTzVkR3AwWERiem1FUWtmTDV3bnJDNVlodlpBV1RWalUyMXFhWEVRVi1rYTl2NENkUUI1Y0JLaDNkT3dPbFphdjlyU2plVE40M2pSdXUwb0tRcWVFQVo4LW9JSmVqbEQ5aw&amp;q=https%3A%2F%2Fmetacast.app%2F&amp;v=uEDDRmO7Tew">⁠⁠⁠https://metacast.app⁠⁠⁠</a>.</p>
+<p>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">⁠⁠r/metacastapp⁠⁠</a>.
+
+<strong>Get in touch!</strong></p>
+<p>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">⁠hello@buildersgonnabuild.com⁠</a></p>
+<p>Subscribe to newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa3dmalJyRDFYdFhIREttOEtUQUNyNFpCZDhNQXxBQ3Jtc0trOW14MTRVRzhhM0x5YmR4VmFEM0VTeTRGSzk3WXVBcHJsb0Rfazh6M2ZwaWIxR0tzZEZzWGF4VWY5VXJBRkxCVTJWNlFCM1hPd1Q0czhrSkNPWldrWFFFRS1GM3NQZG9hZGdXYjJwb0gxWnJmcGpPVQ&amp;q=https%3A%2F%2Fwww.buildersgonnabuild.com%2F&amp;v=uEDDRmO7Tew">⁠⁠⁠https://www.buildersgonnabuild.com⁠⁠⁠</a></p>
+<p>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGhzSE5lMHowVW1mNXZHRWo1c3lJYjJfbDFsQXxBQ3Jtc0ttdzhWeXk2ZWFEQ0pEbXYyTnlvV0V5RU1va2lvV3I2dk1ZNW5FLW1wTks3b1cyNzJkV044MEQyVk0tLTZPcVdpOGF1NTBlRWdraERoNzhJSERGSTFtWnJxRHctX1hJWGYxanpWTmlLNER5Znh3SnFZVQ&amp;q=https%3A%2F%2Fmetacastpodcast.com%2F&amp;v=uEDDRmO7Tew">⁠⁠⁠https://metacastpodcast.com⁠</a></p>]]>
+      </description>
+      <content:encoded>
+        <![CDATA[<p>For 10 years, Henry built mobile apps at Google and Amazon. Now he is a partner at a software development agency <a href="https://www.studioinit.co/" rel="noopener noreferrer nofollow">studio.init()</a>. Henry shares his thoughts on using cross-platform frameworks vs. native languages, argues that Apple’s 30% cut of the in-app purchases is acceptable, and tells us how Google layoffs became a blessing in disguise. </p>
+<p><strong>Do you love audio podcasts?</strong></p>
+<p>Try Metacast podcast app at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbU5uOU1kZjlpcEloTEZLQktRV1dXSGJwMmRNd3xBQ3Jtc0tsVENCUVkwVzJSa3A5T1AwTzVkR3AwWERiem1FUWtmTDV3bnJDNVlodlpBV1RWalUyMXFhWEVRVi1rYTl2NENkUUI1Y0JLaDNkT3dPbFphdjlyU2plVE40M2pSdXUwb0tRcWVFQVo4LW9JSmVqbEQ5aw&amp;q=https%3A%2F%2Fmetacast.app%2F&amp;v=uEDDRmO7Tew">⁠⁠⁠⁠https://metacast.app⁠⁠⁠⁠</a>.</p>
+<p>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">⁠⁠⁠r/metacastapp⁠⁠⁠</a>.</p>
+<p><strong>Segments</strong></p>
+<p>[01:31] Introduction</p>
+<p>[04:03] Viral LinkedIn posts about layoffs</p>
+<p>[08:13] Google layoffs</p>
+<p>[17:36] Cross-platform app development with Flutter vs. native languages</p>
+<p>[30:12] Getting apps into app stores</p>
+<p>[31:43] Apple's 30% in-app purchase fees</p>
+<p>[42:09] Building apps within Google and Amazon</p>
+<p>[50:30] Starting studio.init() and finding first customers</p>
+<p>[56:58] Book recommendations</p>
+<p><strong>Show notes</strong></p>
+<p>Where to find Henry</p>
+<ul>
+ <li><p><a href="https://www.linkedin.com/in/henrytkirk/" rel="noopener noreferrer nofollow">LinkedIn</a></p>
+</li>
+ <li><p><a href="https://www.studioinit.co/" rel="noopener noreferrer nofollow">studio.init()</a></p>
+</li>
+</ul>
+<p>Books</p>
+<ul>
+ <li><p><a href="https://amzn.to/42Xm8Qz" rel="noopener noreferrer nofollow">Permission to Screw Up</a> by Kristen Hadeed</p>
+</li>
+ <li><p><a href="https://amzn.to/3wBmEYI" rel="noopener noreferrer nofollow">Crucial Conversations</a></p>
+</li>
+  <li><p><a href="https://amzn.to/49s09nB" rel="noopener noreferrer nofollow">Getting More</a> by Stuart Diamond</p>
+</li>
+  <li><p><a href="https://amzn.to/48wctSj" rel="noopener noreferrer nofollow">The New One Minute Manager</a> by Ken Blanchard, Spencer Johnson</p>
+</li>
+</ul>
+<p><strong>Do you love audio podcasts?</strong></p>
+<p>Try Metacast podcast app at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbU5uOU1kZjlpcEloTEZLQktRV1dXSGJwMmRNd3xBQ3Jtc0tsVENCUVkwVzJSa3A5T1AwTzVkR3AwWERiem1FUWtmTDV3bnJDNVlodlpBV1RWalUyMXFhWEVRVi1rYTl2NENkUUI1Y0JLaDNkT3dPbFphdjlyU2plVE40M2pSdXUwb0tRcWVFQVo4LW9JSmVqbEQ5aw&amp;q=https%3A%2F%2Fmetacast.app%2F&amp;v=uEDDRmO7Tew">⁠⁠⁠https://metacast.app⁠⁠⁠</a>.</p>
+<p>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">⁠⁠r/metacastapp⁠⁠</a>.
+
+<strong>Get in touch!</strong></p>
+<p>Send us an email at <a href="mailto:hello@buildersgonnabuild.com">⁠hello@buildersgonnabuild.com⁠</a></p>
+<p>Subscribe to newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa3dmalJyRDFYdFhIREttOEtUQUNyNFpCZDhNQXxBQ3Jtc0trOW14MTRVRzhhM0x5YmR4VmFEM0VTeTRGSzk3WXVBcHJsb0Rfazh6M2ZwaWIxR0tzZEZzWGF4VWY5VXJBRkxCVTJWNlFCM1hPd1Q0czhrSkNPWldrWFFFRS1GM3NQZG9hZGdXYjJwb0gxWnJmcGpPVQ&amp;q=https%3A%2F%2Fwww.buildersgonnabuild.com%2F&amp;v=uEDDRmO7Tew">⁠⁠⁠https://www.buildersgonnabuild.com⁠⁠⁠</a></p>
+<p>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGhzSE5lMHowVW1mNXZHRWo1c3lJYjJfbDFsQXxBQ3Jtc0ttdzhWeXk2ZWFEQ0pEbXYyTnlvV0V5RU1va2lvV3I2dk1ZNW5FLW1wTks3b1cyNzJkV044MEQyVk0tLTZPcVdpOGF1NTBlRWdraERoNzhJSERGSTFtWnJxRHctX1hJWGYxanpWTmlLNER5Znh3SnFZVQ&amp;q=https%3A%2F%2Fmetacastpodcast.com%2F&amp;v=uEDDRmO7Tew">⁠⁠⁠https://metacastpodcast.com⁠</a></p>]]>
+      </content:encoded>
+      <pubDate>Wed, 28 Feb 2024 03:03:00 -0500</pubDate>
+      <author>metacast.app</author>
+      <enclosure url="https://media.transistor.fm/a30f0dac/cf0c7f44.mp3" length="85853787" type="audio/mpeg"/>
+      <itunes:author>metacast.app</itunes:author>
+      <itunes:image href="https://img.transistor.fm/AThIt3guYyVezh4QYMVBjvLgJftoNFFiNuKOELEbgus/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzE3ODg1OTIv/MTcxMDM1Mzc3NC1h/cnR3b3JrLmpwZw.jpg"/>
+      <itunes:duration>3578</itunes:duration>
+      <itunes:summary>For 10 years, Henry built mobile apps at Google and Amazon. Now he is a partner at a software development agency studio.init(). Henry shares his thoughts on using cross-platform frameworks vs. native languages, argues that Apple’s 30% cut of the in-app purchases is acceptable, and tells us how Google layoffs became a blessing in disguise. 
+Do you love audio podcasts?
+Try Metacast podcast app at ⁠⁠⁠⁠https://metacast.app⁠⁠⁠⁠.
+Join our Reddit community at ⁠⁠⁠r/metacastapp⁠⁠⁠.
+Segments
+[01:31] Introduction
+[04:03] Viral LinkedIn posts about layoffs
+[08:13] Google layoffs
+[17:36] Cross-platform app development with Flutter vs. native languages
+[30:12] Getting apps into app stores
+[31:43] Apple's 30% in-app purchase fees
+[42:09] Building apps within Google and Amazon
+[50:30] Starting studio.init() and finding first customers
+[56:58] Book recommendations
+Show notes
+Where to find Henry
+
+ LinkedIn
+
+ studio.init()
+
+
+Books
+
+ Permission to Screw Up by Kristen Hadeed
+
+ Crucial Conversations
+
+  Getting More by Stuart Diamond
+
+  The New One Minute Manager by Ken Blanchard, Spencer Johnson
+
+
+Do you love audio podcasts?
+Try Metacast podcast app at ⁠⁠⁠https://metacast.app⁠⁠⁠.
+Join our Reddit community at ⁠⁠r/metacastapp⁠⁠.
+
+Get in touch!
+Send us an email at ⁠hello@buildersgonnabuild.com⁠
+Subscribe to newsletter at ⁠⁠⁠https://www.buildersgonnabuild.com⁠⁠⁠
+Metacast: Behind the scenes - "build in public" style podcast and newsletter at ⁠⁠⁠https://metacastpodcast.com⁠</itunes:summary>
+      <itunes:subtitle>For 10 years, Henry built mobile apps at Google and Amazon. Now he is a partner at a software development agency studio.init(). Henry shares his thoughts on using cross-platform frameworks vs. native languages, argues that Apple’s 30% cut of the in-app pu</itunes:subtitle>
+      <itunes:keywords></itunes:keywords>
+      <itunes:explicit>No</itunes:explicit>
+    </item>
+    <item>
+      <title>3. Dennis E. Taylor, author of best-selling sci-fi series Bobiverse</title>
+      <itunes:season>1</itunes:season>
+      <podcast:season>1</podcast:season>
+      <itunes:episode>3</itunes:episode>
+      <podcast:episode>3</podcast:episode>
+      <itunes:title>3. Dennis E. Taylor, author of best-selling sci-fi series Bobiverse</itunes:title>
+      <itunes:episodeType>full</itunes:episodeType>
+      <guid isPermaLink="false">8561f1f1-2087-4c7d-ad96-06fec59deadd</guid>
+      <link>https://share.transistor.fm/s/27c07e6e</link>
+      <description>
+        <![CDATA[<p>Dennis E. Taylor built software for 35 years before trying himself as a sci-fi author. His first novel Outland earned him some “Starbucks money” on Amazon, but his second book We Are Legion made him a best-selling author. Dennis retired as an engineer and became a full-time writer.</p>
+<p>In this episode, we talked about the parallels between writing software and writing books, Dennis’s process of coming up with ideas and turning them into reality, working with agents, and writing audio-first books.</p>
+<p><strong>Segments</strong></p>
+<p>[02:30] Introduction</p>
+<p>[04:42] Transition from software engineering to writing</p>
+<p>[07:37] Primer on Dennis's books</p>
+<p>[12:02] Parallels between writing software and writing books</p>
+<p>[16:10] Where do ideas come from?</p>
+<p>[19:41] The process of writing</p>
+<p>[22:38] Writing for an audio-first format</p>
+<p>[27:28] Narrating a book</p>
+<p>[30:43] Engaging with fans</p>
+<p>[32:06] Doing research for sci-fi</p>
+<p>[36:17] Making money with books</p>
+<p>[38:58] Dennis's favorite authors</p>
+<p>[41:04] On following the best practices in writing</p>
+<p>[44:22] How writing has changed over time</p>
+<p>[46:06] Advice for aspiring authors</p>
+<p>[47:10] Where is the Bobiverse series going?</p>
+<p><br></p>
+<p><strong>Show notes</strong></p>
+<p>Where to find Dennis</p>
+<ul>
+ <li><p><a href="https://www.audible.com/author/Dennis-E-Taylor/B010ETTBJC?pf_rd_p=d5dbb081-6443-492d-a142-e20438357795&amp;pf_rd_r=MWN7R1AM5Y2PTGRR0P2T&amp;pageLoadId=JWfAw4JjLYLG7hD1&amp;creativeId=d721b04b-3ed5-44e4-b715-7e5953991cb7" rel="noopener noreferrer nofollow">Audible profile</a></p>
+</li>
+ <li><p><a href="https://www.amazon.com/stores/Dennis-E.-Taylor/author/B010ETTBJC?qid=1707838110&amp;sr=1-3&amp;isDramIntegrated=true&amp;shoppingPortalEnabled=true" rel="noopener noreferrer nofollow">Amazon profile</a></p>
+</li>
+  <li><p><a href="https://twitter.com/Dennis_E_Taylor" rel="noopener noreferrer nofollow">Twitter/X</a></p>
+</li>
+</ul>
+<p>Books</p>
+<ul>
+  <li><p>Bobbiverse #1: <a href="https://www.audible.com/pd/We-Are-Legion-We-Are-Bob-Audiobook/B01L082HJ2?eac_link=JrvtazgzjWD4&amp;eac_selected_type=asin&amp;eac_selected=B01L082HJ2&amp;qid=8TD6fGKp17&amp;eac_id=132-0813405-9323516_8TD6fGKp17&amp;sr=1-1" rel="noopener noreferrer nofollow">We Are Legion (We Are Bob)</a></p>
+</li>
+  <li><p>Bobbiverse #2: <a href="https://www.audible.com/pd/For-We-Are-Many-Audiobook/B01N17THEO?qid=1707838033&amp;sr=1-1&amp;ref_pageloadid=not_applicable&amp;ref=a_search_c3_lProduct_1_1&amp;pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&amp;pf_rd_r=YZKC0R2Z2PX5JNDBAKTB&amp;pageLoadId=jsX8XBtrowbCogdq&amp;creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c" rel="noopener noreferrer nofollow">For We Are Many</a></p>
+</li>
+  <li><p>Bobbiverse #3: <a href="https://www.audible.com/pd/All-These-Worlds-Audiobook/B07341FZDC?qid=1707838054&amp;sr=1-1&amp;ref_pageloadid=not_applicable&amp;ref=a_search_c3_lProduct_1_1&amp;pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&amp;pf_rd_r=FS4DJH6CSH950DV691JW&amp;pageLoadId=BfC1V9oJUf2Hy2CS&amp;creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c" rel="noopener noreferrer nofollow">All These Worlds</a></p>
+</li>
+  <li><p>Bobbiverse #4: <a href="https://www.audible.com/pd/Heavens-River-Audiobook/B088C4DBYP?qid=1707838054&amp;sr=1-2&amp;ref_pageloadid=not_applicable&amp;ref=a_search_c3_lProduct_1_2&amp;pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&amp;pf_rd_r=FS4DJH6CSH950DV691JW&amp;pageLoadId=BfC1V9oJUf2Hy2CS&amp;creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c" rel="noopener noreferrer nofollow">Heaven’s River</a></p>
+</li>
+  <li><p><a href="https://www.audible.com/pd/Outland-Audiobook/B07PP44743?plink=TqirNMHwXuiU7GhA&amp;pf_rd_p=9cd25b0f-7f3e-46ff-9000-aab0a45d8df6&amp;pf_rd_r=MWN7R1AM5Y2PTGRR0P2T&amp;pageLoadId=JWfAw4JjLYLG7hD1&amp;creativeId=b2f3d5ed-94f6-43ed-b5f1-19144c907513" rel="noopener noreferrer nofollow">Outland</a></p>
+</li>
+  <li><p><a href="https://www.audible.com/pd/Roadkill-Audiobook/B0B6QBNK4J?plink=hsY8ib0Bv467hl9L&amp;pf_rd_p=ffa7f6c6-3bca-45d4-9f4c-816d1f5fdd73&amp;pf_rd_r=J7FQ9VK2ABVVDBDKJY9H&amp;pageLoadId=a3KH6dxqtxDp0yJk&amp;creativeId=1dfe4386-f6dc-4021-b08a-483cfe6b0bb1" rel="noopener noreferrer nofollow">Roadkill</a></p>
+</li>
+</ul>
+<p><br></p>
+<p><strong>Do you love audio podcasts?</strong></p>
+<p>Try Metacast podcast app at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbU5uOU1kZjlpcEloTEZLQktRV1dXSGJwMmRNd3xBQ3Jtc0tsVENCUVkwVzJSa3A5T1AwTzVkR3AwWERiem1FUWtmTDV3bnJDNVlodlpBV1RWalUyMXFhWEVRVi1rYTl2NENkUUI1Y0JLaDNkT3dPbFphdjlyU2plVE40M2pSdXUwb0tRcWVFQVo4LW9JSmVqbEQ5aw&amp;q=https%3A%2F%2Fmetacast.app%2F&amp;v=uEDDRmO7Tew">⁠⁠https://metacast.app⁠⁠</a>.</p>
+<p>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">⁠r/metacastapp⁠</a>.
+
+<strong>Get in touch!</strong></p>
+<p>Send us an email at <a href="mailto:hello@buildersgonnabuild.com" rel="noopener noreferer">hello@buildersgonnabuild.com</a></p>
+<p>Subscribe to newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa3dmalJyRDFYdFhIREttOEtUQUNyNFpCZDhNQXxBQ3Jtc0trOW14MTRVRzhhM0x5YmR4VmFEM0VTeTRGSzk3WXVBcHJsb0Rfazh6M2ZwaWIxR0tzZEZzWGF4VWY5VXJBRkxCVTJWNlFCM1hPd1Q0czhrSkNPWldrWFFFRS1GM3NQZG9hZGdXYjJwb0gxWnJmcGpPVQ&amp;q=https%3A%2F%2Fwww.buildersgonnabuild.com%2F&amp;v=uEDDRmO7Tew">⁠⁠https://www.buildersgonnabuild.com⁠⁠</a></p>
+<p>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGhzSE5lMHowVW1mNXZHRWo1c3lJYjJfbDFsQXxBQ3Jtc0ttdzhWeXk2ZWFEQ0pEbXYyTnlvV0V5RU1va2lvV3I2dk1ZNW5FLW1wTks3b1cyNzJkV044MEQyVk0tLTZPcVdpOGF1NTBlRWdraERoNzhJSERGSTFtWnJxRHctX1hJWGYxanpWTmlLNER5Znh3SnFZVQ&amp;q=https%3A%2F%2Fmetacastpodcast.com%2F&amp;v=uEDDRmO7Tew">⁠⁠https://metacastpodcast.com⁠</a></p>]]>
+      </description>
+      <content:encoded>
+        <![CDATA[<p>Dennis E. Taylor built software for 35 years before trying himself as a sci-fi author. His first novel Outland earned him some “Starbucks money” on Amazon, but his second book We Are Legion made him a best-selling author. Dennis retired as an engineer and became a full-time writer.</p>
+<p>In this episode, we talked about the parallels between writing software and writing books, Dennis’s process of coming up with ideas and turning them into reality, working with agents, and writing audio-first books.</p>
+<p><strong>Segments</strong></p>
+<p>[02:30] Introduction</p>
+<p>[04:42] Transition from software engineering to writing</p>
+<p>[07:37] Primer on Dennis's books</p>
+<p>[12:02] Parallels between writing software and writing books</p>
+<p>[16:10] Where do ideas come from?</p>
+<p>[19:41] The process of writing</p>
+<p>[22:38] Writing for an audio-first format</p>
+<p>[27:28] Narrating a book</p>
+<p>[30:43] Engaging with fans</p>
+<p>[32:06] Doing research for sci-fi</p>
+<p>[36:17] Making money with books</p>
+<p>[38:58] Dennis's favorite authors</p>
+<p>[41:04] On following the best practices in writing</p>
+<p>[44:22] How writing has changed over time</p>
+<p>[46:06] Advice for aspiring authors</p>
+<p>[47:10] Where is the Bobiverse series going?</p>
+<p><br></p>
+<p><strong>Show notes</strong></p>
+<p>Where to find Dennis</p>
+<ul>
+ <li><p><a href="https://www.audible.com/author/Dennis-E-Taylor/B010ETTBJC?pf_rd_p=d5dbb081-6443-492d-a142-e20438357795&amp;pf_rd_r=MWN7R1AM5Y2PTGRR0P2T&amp;pageLoadId=JWfAw4JjLYLG7hD1&amp;creativeId=d721b04b-3ed5-44e4-b715-7e5953991cb7" rel="noopener noreferrer nofollow">Audible profile</a></p>
+</li>
+ <li><p><a href="https://www.amazon.com/stores/Dennis-E.-Taylor/author/B010ETTBJC?qid=1707838110&amp;sr=1-3&amp;isDramIntegrated=true&amp;shoppingPortalEnabled=true" rel="noopener noreferrer nofollow">Amazon profile</a></p>
+</li>
+  <li><p><a href="https://twitter.com/Dennis_E_Taylor" rel="noopener noreferrer nofollow">Twitter/X</a></p>
+</li>
+</ul>
+<p>Books</p>
+<ul>
+  <li><p>Bobbiverse #1: <a href="https://www.audible.com/pd/We-Are-Legion-We-Are-Bob-Audiobook/B01L082HJ2?eac_link=JrvtazgzjWD4&amp;eac_selected_type=asin&amp;eac_selected=B01L082HJ2&amp;qid=8TD6fGKp17&amp;eac_id=132-0813405-9323516_8TD6fGKp17&amp;sr=1-1" rel="noopener noreferrer nofollow">We Are Legion (We Are Bob)</a></p>
+</li>
+  <li><p>Bobbiverse #2: <a href="https://www.audible.com/pd/For-We-Are-Many-Audiobook/B01N17THEO?qid=1707838033&amp;sr=1-1&amp;ref_pageloadid=not_applicable&amp;ref=a_search_c3_lProduct_1_1&amp;pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&amp;pf_rd_r=YZKC0R2Z2PX5JNDBAKTB&amp;pageLoadId=jsX8XBtrowbCogdq&amp;creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c" rel="noopener noreferrer nofollow">For We Are Many</a></p>
+</li>
+  <li><p>Bobbiverse #3: <a href="https://www.audible.com/pd/All-These-Worlds-Audiobook/B07341FZDC?qid=1707838054&amp;sr=1-1&amp;ref_pageloadid=not_applicable&amp;ref=a_search_c3_lProduct_1_1&amp;pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&amp;pf_rd_r=FS4DJH6CSH950DV691JW&amp;pageLoadId=BfC1V9oJUf2Hy2CS&amp;creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c" rel="noopener noreferrer nofollow">All These Worlds</a></p>
+</li>
+  <li><p>Bobbiverse #4: <a href="https://www.audible.com/pd/Heavens-River-Audiobook/B088C4DBYP?qid=1707838054&amp;sr=1-2&amp;ref_pageloadid=not_applicable&amp;ref=a_search_c3_lProduct_1_2&amp;pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&amp;pf_rd_r=FS4DJH6CSH950DV691JW&amp;pageLoadId=BfC1V9oJUf2Hy2CS&amp;creativeId=0d6f6720-f41c-457e-a42b-8c8dceb62f2c" rel="noopener noreferrer nofollow">Heaven’s River</a></p>
+</li>
+  <li><p><a href="https://www.audible.com/pd/Outland-Audiobook/B07PP44743?plink=TqirNMHwXuiU7GhA&amp;pf_rd_p=9cd25b0f-7f3e-46ff-9000-aab0a45d8df6&amp;pf_rd_r=MWN7R1AM5Y2PTGRR0P2T&amp;pageLoadId=JWfAw4JjLYLG7hD1&amp;creativeId=b2f3d5ed-94f6-43ed-b5f1-19144c907513" rel="noopener noreferrer nofollow">Outland</a></p>
+</li>
+  <li><p><a href="https://www.audible.com/pd/Roadkill-Audiobook/B0B6QBNK4J?plink=hsY8ib0Bv467hl9L&amp;pf_rd_p=ffa7f6c6-3bca-45d4-9f4c-816d1f5fdd73&amp;pf_rd_r=J7FQ9VK2ABVVDBDKJY9H&amp;pageLoadId=a3KH6dxqtxDp0yJk&amp;creativeId=1dfe4386-f6dc-4021-b08a-483cfe6b0bb1" rel="noopener noreferrer nofollow">Roadkill</a></p>
+</li>
+</ul>
+<p><br></p>
+<p><strong>Do you love audio podcasts?</strong></p>
+<p>Try Metacast podcast app at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbU5uOU1kZjlpcEloTEZLQktRV1dXSGJwMmRNd3xBQ3Jtc0tsVENCUVkwVzJSa3A5T1AwTzVkR3AwWERiem1FUWtmTDV3bnJDNVlodlpBV1RWalUyMXFhWEVRVi1rYTl2NENkUUI1Y0JLaDNkT3dPbFphdjlyU2plVE40M2pSdXUwb0tRcWVFQVo4LW9JSmVqbEQ5aw&amp;q=https%3A%2F%2Fmetacast.app%2F&amp;v=uEDDRmO7Tew">⁠⁠https://metacast.app⁠⁠</a>.</p>
+<p>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/">⁠r/metacastapp⁠</a>.
+
+<strong>Get in touch!</strong></p>
+<p>Send us an email at <a href="mailto:hello@buildersgonnabuild.com" rel="noopener noreferer">hello@buildersgonnabuild.com</a></p>
+<p>Subscribe to newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa3dmalJyRDFYdFhIREttOEtUQUNyNFpCZDhNQXxBQ3Jtc0trOW14MTRVRzhhM0x5YmR4VmFEM0VTeTRGSzk3WXVBcHJsb0Rfazh6M2ZwaWIxR0tzZEZzWGF4VWY5VXJBRkxCVTJWNlFCM1hPd1Q0czhrSkNPWldrWFFFRS1GM3NQZG9hZGdXYjJwb0gxWnJmcGpPVQ&amp;q=https%3A%2F%2Fwww.buildersgonnabuild.com%2F&amp;v=uEDDRmO7Tew">⁠⁠https://www.buildersgonnabuild.com⁠⁠</a></p>
+<p>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGhzSE5lMHowVW1mNXZHRWo1c3lJYjJfbDFsQXxBQ3Jtc0ttdzhWeXk2ZWFEQ0pEbXYyTnlvV0V5RU1va2lvV3I2dk1ZNW5FLW1wTks3b1cyNzJkV044MEQyVk0tLTZPcVdpOGF1NTBlRWdraERoNzhJSERGSTFtWnJxRHctX1hJWGYxanpWTmlLNER5Znh3SnFZVQ&amp;q=https%3A%2F%2Fmetacastpodcast.com%2F&amp;v=uEDDRmO7Tew">⁠⁠https://metacastpodcast.com⁠</a></p>]]>
+      </content:encoded>
+      <pubDate>Wed, 14 Feb 2024 03:33:00 -0500</pubDate>
+      <author>metacast.app</author>
+      <enclosure url="https://media.transistor.fm/27c07e6e/a6b2b585.mp3" length="46981079" type="audio/mpeg"/>
+      <itunes:author>metacast.app</itunes:author>
+      <itunes:image href="https://img.transistor.fm/fQIm8gohLTJlGVUe236Daq2d1d-vQHzk7H5C3lBb5No/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzE3ODg1OTEv/MTcxMDM1Mzc3My1h/cnR3b3JrLmpwZw.jpg"/>
+      <itunes:duration>2937</itunes:duration>
+      <itunes:summary>Dennis E. Taylor built software for 35 years before trying himself as a sci-fi author. His first novel Outland earned him some “Starbucks money” on Amazon, but his second book We Are Legion made him a best-selling author. Dennis retired as an engineer and became a full-time writer.
+In this episode, we talked about the parallels between writing software and writing books, Dennis’s process of coming up with ideas and turning them into reality, working with agents, and writing audio-first books.
+Segments
+[02:30] Introduction
+[04:42] Transition from software engineering to writing
+[07:37] Primer on Dennis's books
+[12:02] Parallels between writing software and writing books
+[16:10] Where do ideas come from?
+[19:41] The process of writing
+[22:38] Writing for an audio-first format
+[27:28] Narrating a book
+[30:43] Engaging with fans
+[32:06] Doing research for sci-fi
+[36:17] Making money with books
+[38:58] Dennis's favorite authors
+[41:04] On following the best practices in writing
+[44:22] How writing has changed over time
+[46:06] Advice for aspiring authors
+[47:10] Where is the Bobiverse series going?
+
+Show notes
+Where to find Dennis
+
+ Audible profile
+
+ Amazon profile
+
+  Twitter/X
+
+
+Books
+
+  Bobbiverse #1: We Are Legion (We Are Bob)
+
+  Bobbiverse #2: For We Are Many
+
+  Bobbiverse #3: All These Worlds
+
+  Bobbiverse #4: Heaven’s River
+
+  Outland
+
+  Roadkill
+
+
+
+Do you love audio podcasts?
+Try Metacast podcast app at ⁠⁠https://metacast.app⁠⁠.
+Join our Reddit community at ⁠r/metacastapp⁠.
+
+Get in touch!
+Send us an email at hello@buildersgonnabuild.com
+Subscribe to newsletter at ⁠⁠https://www.buildersgonnabuild.com⁠⁠
+Metacast: Behind the scenes - "build in public" style podcast and newsletter at ⁠⁠https://metacastpodcast.com⁠</itunes:summary>
+      <itunes:subtitle>Dennis E. Taylor built software for 35 years before trying himself as a sci-fi author. His first novel Outland earned him some “Starbucks money” on Amazon, but his second book We Are Legion made him a best-selling author. Dennis retired as an engineer and</itunes:subtitle>
+      <itunes:keywords></itunes:keywords>
+      <itunes:explicit>No</itunes:explicit>
+    </item>
+    <item>
+      <title>2. Justin Frankel, creator of Winamp and Reaper</title>
+      <itunes:season>1</itunes:season>
+      <podcast:season>1</podcast:season>
+      <itunes:episode>2</itunes:episode>
+      <podcast:episode>2</podcast:episode>
+      <itunes:title>2. Justin Frankel, creator of Winamp and Reaper</itunes:title>
+      <itunes:episodeType>full</itunes:episodeType>
+      <guid isPermaLink="false">a7e040f3-4924-419c-8d22-4e4ab1827038</guid>
+      <link>https://share.transistor.fm/s/ff90ba08</link>
+      <description>
+        <![CDATA[<p>Justin shares how he created Winamp and sold it to AOL at age 20 and tells us about his current project, digital audio workstation (DAW) Reaper.</p>
+<p><strong>Segments</strong></p>
+<p>[03:16] The genesis of Winamp</p>
+<p>[11:07] Winamp whips the llama's ass</p>
+<p>[14:06] Nullsoft</p>
+<p>[16:27] Winamp as a platform</p>
+<p>[23:16] The business side of Winamp</p>
+<p>[24:11] What was it like to work at AOL?</p>
+<p>[27:06] Why Justin doesn't use streaming services</p>
+<p>[30:03] Justin's website</p>
+<p>[32:06] Why Justin created Reaper</p>
+<p>[35:48] Shipping v1 of Reaper</p>
+<p>[37:02] Reaper is built by just a few people</p>
+<p>[38:53] Cross-platform codebase</p>
+<p>[40:48] Reaper as a platform</p>
+<p>[43:42] Future of Reaper</p>
+<p>[44:40] AI in Reaper</p>
+<p>[47:09] Questions lightning round</p>
+<p>[53:36] Book recommendations</p>
+<p><br></p>
+<p><strong>Show notes</strong></p>
+<p>Where to find Justin</p>
+<ul>
+ <li><p><a href="https://cockos.net/@justin">Mastodon — justin@cockos.net</a></p>
+</li>
+ <li><p><a href="https://1014.org/">Justin’s website</a></p>
+</li>
+  <li><p><a href="https://www.askjf.com/">Ask Justin Frankel</a></p>
+</li>
+</ul>
+<p>Books</p>
+<ul>
+  <li><p><a href="https://amzn.to/3KQQm0p">Masters of Doom</a> by David Kushner</p>
+</li>
+  <li><p><a href="https://amzn.to/43nSDHD">Nona the Ninth</a> by Tamsyn Muir</p>
+</li>
+  <li><p><a href="https://amzn.to/405MqwV">The Three-Body Problem</a> by Cixin Liu</p>
+</li>
+  <li><p><a href="https://amzn.to/43sGRfd">Catch-22</a> by Joseph Heller</p>
+</li>
+  <li><p><a href="https://amzn.to/3Ku4HOP">Flatland: A Romance of Many Dimensions</a> by Edwin A. Abbott</p>
+</li>
+</ul>
+<p>Podcasts</p>
+<ul>
+  <li><a href="https://www.internethistorypodcast.com/2015/07/justin-frankel-creator-of-winamp/">Interview with Justin on the Internet History Podcast</a></li>
+</ul>
+<p>Software</p>
+<ul>
+  <li><p><a href="https://en.wikipedia.org/wiki/Winamp">Winamp</a></p>
+</li>
+  <li><p><a href="https://www.reaper.fm/">Reaper</a></p>
+</li>
+</ul>
+<p><strong>Do you love audio podcasts?</strong></p>
+<p>Try Metacast podcast app at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbU5uOU1kZjlpcEloTEZLQktRV1dXSGJwMmRNd3xBQ3Jtc0tsVENCUVkwVzJSa3A5T1AwTzVkR3AwWERiem1FUWtmTDV3bnJDNVlodlpBV1RWalUyMXFhWEVRVi1rYTl2NENkUUI1Y0JLaDNkT3dPbFphdjlyU2plVE40M2pSdXUwb0tRcWVFQVo4LW9JSmVqbEQ5aw&amp;q=https%3A%2F%2Fmetacast.app%2F&amp;v=uEDDRmO7Tew">⁠https://metacast.app⁠</a>.</p>
+<p>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/" rel="noopener noreferer">r/metacastapp</a>.
+
+<strong>Get in touch!</strong></p>
+<p>Send us an email at hello@buildersgonnabuild.com</p>
+<p>Subscribe to newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa3dmalJyRDFYdFhIREttOEtUQUNyNFpCZDhNQXxBQ3Jtc0trOW14MTRVRzhhM0x5YmR4VmFEM0VTeTRGSzk3WXVBcHJsb0Rfazh6M2ZwaWIxR0tzZEZzWGF4VWY5VXJBRkxCVTJWNlFCM1hPd1Q0czhrSkNPWldrWFFFRS1GM3NQZG9hZGdXYjJwb0gxWnJmcGpPVQ&amp;q=https%3A%2F%2Fwww.buildersgonnabuild.com%2F&amp;v=uEDDRmO7Tew">⁠https://www.buildersgonnabuild.com⁠</a></p>
+<p>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGhzSE5lMHowVW1mNXZHRWo1c3lJYjJfbDFsQXxBQ3Jtc0ttdzhWeXk2ZWFEQ0pEbXYyTnlvV0V5RU1va2lvV3I2dk1ZNW5FLW1wTks3b1cyNzJkV044MEQyVk0tLTZPcVdpOGF1NTBlRWdraERoNzhJSERGSTFtWnJxRHctX1hJWGYxanpWTmlLNER5Znh3SnFZVQ&amp;q=https%3A%2F%2Fmetacastpodcast.com%2F&amp;v=uEDDRmO7Tew">⁠https://metacastpodcast.com⁠</a></p>]]>
+      </description>
+      <content:encoded>
+        <![CDATA[<p>Justin shares how he created Winamp and sold it to AOL at age 20 and tells us about his current project, digital audio workstation (DAW) Reaper.</p>
+<p><strong>Segments</strong></p>
+<p>[03:16] The genesis of Winamp</p>
+<p>[11:07] Winamp whips the llama's ass</p>
+<p>[14:06] Nullsoft</p>
+<p>[16:27] Winamp as a platform</p>
+<p>[23:16] The business side of Winamp</p>
+<p>[24:11] What was it like to work at AOL?</p>
+<p>[27:06] Why Justin doesn't use streaming services</p>
+<p>[30:03] Justin's website</p>
+<p>[32:06] Why Justin created Reaper</p>
+<p>[35:48] Shipping v1 of Reaper</p>
+<p>[37:02] Reaper is built by just a few people</p>
+<p>[38:53] Cross-platform codebase</p>
+<p>[40:48] Reaper as a platform</p>
+<p>[43:42] Future of Reaper</p>
+<p>[44:40] AI in Reaper</p>
+<p>[47:09] Questions lightning round</p>
+<p>[53:36] Book recommendations</p>
+<p><br></p>
+<p><strong>Show notes</strong></p>
+<p>Where to find Justin</p>
+<ul>
+ <li><p><a href="https://cockos.net/@justin">Mastodon — justin@cockos.net</a></p>
+</li>
+ <li><p><a href="https://1014.org/">Justin’s website</a></p>
+</li>
+  <li><p><a href="https://www.askjf.com/">Ask Justin Frankel</a></p>
+</li>
+</ul>
+<p>Books</p>
+<ul>
+  <li><p><a href="https://amzn.to/3KQQm0p">Masters of Doom</a> by David Kushner</p>
+</li>
+  <li><p><a href="https://amzn.to/43nSDHD">Nona the Ninth</a> by Tamsyn Muir</p>
+</li>
+  <li><p><a href="https://amzn.to/405MqwV">The Three-Body Problem</a> by Cixin Liu</p>
+</li>
+  <li><p><a href="https://amzn.to/43sGRfd">Catch-22</a> by Joseph Heller</p>
+</li>
+  <li><p><a href="https://amzn.to/3Ku4HOP">Flatland: A Romance of Many Dimensions</a> by Edwin A. Abbott</p>
+</li>
+</ul>
+<p>Podcasts</p>
+<ul>
+  <li><a href="https://www.internethistorypodcast.com/2015/07/justin-frankel-creator-of-winamp/">Interview with Justin on the Internet History Podcast</a></li>
+</ul>
+<p>Software</p>
+<ul>
+  <li><p><a href="https://en.wikipedia.org/wiki/Winamp">Winamp</a></p>
+</li>
+  <li><p><a href="https://www.reaper.fm/">Reaper</a></p>
+</li>
+</ul>
+<p><strong>Do you love audio podcasts?</strong></p>
+<p>Try Metacast podcast app at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbU5uOU1kZjlpcEloTEZLQktRV1dXSGJwMmRNd3xBQ3Jtc0tsVENCUVkwVzJSa3A5T1AwTzVkR3AwWERiem1FUWtmTDV3bnJDNVlodlpBV1RWalUyMXFhWEVRVi1rYTl2NENkUUI1Y0JLaDNkT3dPbFphdjlyU2plVE40M2pSdXUwb0tRcWVFQVo4LW9JSmVqbEQ5aw&amp;q=https%3A%2F%2Fmetacast.app%2F&amp;v=uEDDRmO7Tew">⁠https://metacast.app⁠</a>.</p>
+<p>Join our Reddit community at <a href="https://www.reddit.com/r/metacastapp/" rel="noopener noreferer">r/metacastapp</a>.
+
+<strong>Get in touch!</strong></p>
+<p>Send us an email at hello@buildersgonnabuild.com</p>
+<p>Subscribe to newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa3dmalJyRDFYdFhIREttOEtUQUNyNFpCZDhNQXxBQ3Jtc0trOW14MTRVRzhhM0x5YmR4VmFEM0VTeTRGSzk3WXVBcHJsb0Rfazh6M2ZwaWIxR0tzZEZzWGF4VWY5VXJBRkxCVTJWNlFCM1hPd1Q0czhrSkNPWldrWFFFRS1GM3NQZG9hZGdXYjJwb0gxWnJmcGpPVQ&amp;q=https%3A%2F%2Fwww.buildersgonnabuild.com%2F&amp;v=uEDDRmO7Tew">⁠https://www.buildersgonnabuild.com⁠</a></p>
+<p>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGhzSE5lMHowVW1mNXZHRWo1c3lJYjJfbDFsQXxBQ3Jtc0ttdzhWeXk2ZWFEQ0pEbXYyTnlvV0V5RU1va2lvV3I2dk1ZNW5FLW1wTks3b1cyNzJkV044MEQyVk0tLTZPcVdpOGF1NTBlRWdraERoNzhJSERGSTFtWnJxRHctX1hJWGYxanpWTmlLNER5Znh3SnFZVQ&amp;q=https%3A%2F%2Fmetacastpodcast.com%2F&amp;v=uEDDRmO7Tew">⁠https://metacastpodcast.com⁠</a></p>]]>
+      </content:encoded>
+      <pubDate>Wed, 31 Jan 2024 03:30:00 -0500</pubDate>
+      <author>metacast.app</author>
+      <enclosure url="https://media.transistor.fm/ff90ba08/6c2fa52f.mp3" length="78787545" type="audio/mpeg"/>
+      <itunes:author>metacast.app</itunes:author>
+      <itunes:image href="https://img.transistor.fm/TFX9wYjKIxWvKMDm0SsN9zrAoGNfhm6q7tIBoLlN-WA/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzE3ODg1OTAv/MTcxMDM1Mzc3NC1h/cnR3b3JrLmpwZw.jpg"/>
+      <itunes:duration>3283</itunes:duration>
+      <itunes:summary>Justin shares how he created Winamp and sold it to AOL at age 20 and tells us about his current project, digital audio workstation (DAW) Reaper.
+Segments
+[03:16] The genesis of Winamp
+[11:07] Winamp whips the llama's ass
+[14:06] Nullsoft
+[16:27] Winamp as a platform
+[23:16] The business side of Winamp
+[24:11] What was it like to work at AOL?
+[27:06] Why Justin doesn't use streaming services
+[30:03] Justin's website
+[32:06] Why Justin created Reaper
+[35:48] Shipping v1 of Reaper
+[37:02] Reaper is built by just a few people
+[38:53] Cross-platform codebase
+[40:48] Reaper as a platform
+[43:42] Future of Reaper
+[44:40] AI in Reaper
+[47:09] Questions lightning round
+[53:36] Book recommendations
+
+Show notes
+Where to find Justin
+
+ Mastodon — justin@cockos.net
+
+ Justin’s website
+
+  Ask Justin Frankel
+
+
+Books
+
+  Masters of Doom by David Kushner
+
+  Nona the Ninth by Tamsyn Muir
+
+  The Three-Body Problem by Cixin Liu
+
+  Catch-22 by Joseph Heller
+
+  Flatland: A Romance of Many Dimensions by Edwin A. Abbott
+
+
+Podcasts
+
+  Interview with Justin on the Internet History Podcast
+
+Software
+
+  Winamp
+
+  Reaper
+
+
+Do you love audio podcasts?
+Try Metacast podcast app at ⁠https://metacast.app⁠.
+Join our Reddit community at r/metacastapp.
+
+Get in touch!
+Send us an email at hello@buildersgonnabuild.com
+Subscribe to newsletter at ⁠https://www.buildersgonnabuild.com⁠
+Metacast: Behind the scenes - "build in public" style podcast and newsletter at ⁠https://metacastpodcast.com⁠</itunes:summary>
+      <itunes:subtitle>Justin shares how he created Winamp and sold it to AOL at age 20 and tells us about his current project, digital audio workstation (DAW) Reaper.
+Segments
+[03:16] The genesis of Winamp
+[11:07] Winamp whips the llama's ass
+[14:06] Nullsoft
+[16:27] Winamp as</itunes:subtitle>
+      <itunes:keywords></itunes:keywords>
+      <itunes:explicit>Yes</itunes:explicit>
+    </item>
+    <item>
+      <title>1. Christian Selig, creator of Apollo Reddit app and Pixel Pals</title>
+      <itunes:season>1</itunes:season>
+      <podcast:season>1</podcast:season>
+      <itunes:episode>1</itunes:episode>
+      <podcast:episode>1</podcast:episode>
+      <itunes:title>1. Christian Selig, creator of Apollo Reddit app and Pixel Pals</itunes:title>
+      <itunes:episodeType>full</itunes:episodeType>
+      <guid isPermaLink="false">9d3fa9e4-d04a-442e-8f03-f841138bed63</guid>
+      <link>https://share.transistor.fm/s/b5c8c9da</link>
+      <description>
+        <![CDATA[<p>Christian tells a story of how Apollo got started, grew and eventually had to shut down following Reddit's API pricing decision.</p><p><br></p><p><strong>Segments</strong></p><p>[00:46] Introduction of Christian</p><p>[01:58] How Christian got into app development</p><p>[03:36] Internship at Apple</p><p>[06:38] The origin of the name for Apollo</p><p>[07:49] Launching v1 of Apollo</p><p>[13:12] Pricing the app</p><p>[17:46] Apollo t-shirts and custom app icons</p><p>[21:38] Adding notifications and being rejected by Apple</p><p>[26:15] Initial reception of Apollo and building a community</p><p>[31:32] Apollo's growth</p><p>[39:39] Challenges with Reddit API</p><p>[41:51] The demise of Apollo</p><p>[47:11] Apollo in metrics</p><p>[54:14] PixelPals</p><p>[56:05] Advice for app developers</p><p>[57:26] Podcast and book recommendations</p><p><br></p><p><strong>Show notes</strong></p><ul><li>Christian on Twitter/X: <a href="https://twitter.com/ChristianSelig">@ChristianSelig</a></li><li><a href="https://apps.apple.com/us/app/pixel-pals-widget-pet-game/id6443919232">Pixel Pals Widget Pet Game</a> on Apple App Store</li><li>Apollo app subreddit <a href="https://www.reddit.com/r/apolloapp/">r/apolloapp</a></li></ul><p><strong>Do you love audio podcasts?</strong></p><p>Sign up for Metacast podcast app at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbU5uOU1kZjlpcEloTEZLQktRV1dXSGJwMmRNd3xBQ3Jtc0tsVENCUVkwVzJSa3A5T1AwTzVkR3AwWERiem1FUWtmTDV3bnJDNVlodlpBV1RWalUyMXFhWEVRVi1rYTl2NENkUUI1Y0JLaDNkT3dPbFphdjlyU2plVE40M2pSdXUwb0tRcWVFQVo4LW9JSmVqbEQ5aw&amp;q=https%3A%2F%2Fmetacast.app%2F&amp;v=uEDDRmO7Tew">https://metacast.app</a>. <strong>Get in touch!</strong></p><p>Send us an email at hello@buildersgonnabuild.com</p><p>Subscribe to newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa3dmalJyRDFYdFhIREttOEtUQUNyNFpCZDhNQXxBQ3Jtc0trOW14MTRVRzhhM0x5YmR4VmFEM0VTeTRGSzk3WXVBcHJsb0Rfazh6M2ZwaWIxR0tzZEZzWGF4VWY5VXJBRkxCVTJWNlFCM1hPd1Q0czhrSkNPWldrWFFFRS1GM3NQZG9hZGdXYjJwb0gxWnJmcGpPVQ&amp;q=https%3A%2F%2Fwww.buildersgonnabuild.com%2F&amp;v=uEDDRmO7Tew">https://www.buildersgonnabuild.com</a></p><p>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGhzSE5lMHowVW1mNXZHRWo1c3lJYjJfbDFsQXxBQ3Jtc0ttdzhWeXk2ZWFEQ0pEbXYyTnlvV0V5RU1va2lvV3I2dk1ZNW5FLW1wTks3b1cyNzJkV044MEQyVk0tLTZPcVdpOGF1NTBlRWdraERoNzhJSERGSTFtWnJxRHctX1hJWGYxanpWTmlLNER5Znh3SnFZVQ&amp;q=https%3A%2F%2Fmetacastpodcast.com%2F&amp;v=uEDDRmO7Tew">https://metacastpodcast.com</a></p>]]>
+      </description>
+      <content:encoded>
+        <![CDATA[<p>Christian tells a story of how Apollo got started, grew and eventually had to shut down following Reddit's API pricing decision.</p><p><br></p><p><strong>Segments</strong></p><p>[00:46] Introduction of Christian</p><p>[01:58] How Christian got into app development</p><p>[03:36] Internship at Apple</p><p>[06:38] The origin of the name for Apollo</p><p>[07:49] Launching v1 of Apollo</p><p>[13:12] Pricing the app</p><p>[17:46] Apollo t-shirts and custom app icons</p><p>[21:38] Adding notifications and being rejected by Apple</p><p>[26:15] Initial reception of Apollo and building a community</p><p>[31:32] Apollo's growth</p><p>[39:39] Challenges with Reddit API</p><p>[41:51] The demise of Apollo</p><p>[47:11] Apollo in metrics</p><p>[54:14] PixelPals</p><p>[56:05] Advice for app developers</p><p>[57:26] Podcast and book recommendations</p><p><br></p><p><strong>Show notes</strong></p><ul><li>Christian on Twitter/X: <a href="https://twitter.com/ChristianSelig">@ChristianSelig</a></li><li><a href="https://apps.apple.com/us/app/pixel-pals-widget-pet-game/id6443919232">Pixel Pals Widget Pet Game</a> on Apple App Store</li><li>Apollo app subreddit <a href="https://www.reddit.com/r/apolloapp/">r/apolloapp</a></li></ul><p><strong>Do you love audio podcasts?</strong></p><p>Sign up for Metacast podcast app at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbU5uOU1kZjlpcEloTEZLQktRV1dXSGJwMmRNd3xBQ3Jtc0tsVENCUVkwVzJSa3A5T1AwTzVkR3AwWERiem1FUWtmTDV3bnJDNVlodlpBV1RWalUyMXFhWEVRVi1rYTl2NENkUUI1Y0JLaDNkT3dPbFphdjlyU2plVE40M2pSdXUwb0tRcWVFQVo4LW9JSmVqbEQ5aw&amp;q=https%3A%2F%2Fmetacast.app%2F&amp;v=uEDDRmO7Tew">https://metacast.app</a>. <strong>Get in touch!</strong></p><p>Send us an email at hello@buildersgonnabuild.com</p><p>Subscribe to newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa3dmalJyRDFYdFhIREttOEtUQUNyNFpCZDhNQXxBQ3Jtc0trOW14MTRVRzhhM0x5YmR4VmFEM0VTeTRGSzk3WXVBcHJsb0Rfazh6M2ZwaWIxR0tzZEZzWGF4VWY5VXJBRkxCVTJWNlFCM1hPd1Q0czhrSkNPWldrWFFFRS1GM3NQZG9hZGdXYjJwb0gxWnJmcGpPVQ&amp;q=https%3A%2F%2Fwww.buildersgonnabuild.com%2F&amp;v=uEDDRmO7Tew">https://www.buildersgonnabuild.com</a></p><p>Metacast: Behind the scenes - "build in public" style podcast and newsletter at <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGhzSE5lMHowVW1mNXZHRWo1c3lJYjJfbDFsQXxBQ3Jtc0ttdzhWeXk2ZWFEQ0pEbXYyTnlvV0V5RU1va2lvV3I2dk1ZNW5FLW1wTks3b1cyNzJkV044MEQyVk0tLTZPcVdpOGF1NTBlRWdraERoNzhJSERGSTFtWnJxRHctX1hJWGYxanpWTmlLNER5Znh3SnFZVQ&amp;q=https%3A%2F%2Fmetacastpodcast.com%2F&amp;v=uEDDRmO7Tew">https://metacastpodcast.com</a></p>]]>
+      </content:encoded>
+      <pubDate>Mon, 29 Jan 2024 21:06:54 -0500</pubDate>
+      <author>metacast.app</author>
+      <enclosure url="https://media.transistor.fm/b5c8c9da/0d47730d.mp3" length="86194842" type="audio/mpeg"/>
+      <itunes:author>metacast.app</itunes:author>
+      <itunes:image href="https://img.transistor.fm/PtuFlC6fXtJ76pZmZPBA2bs8cyk6KqZ1izgBgDH9g0U/rs:fill:3000:3000:1/q:60/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS9lcGlz/b2RlLzE3ODg1ODkv/MTcxMDM1Mzc2Mi1h/cnR3b3JrLmpwZw.jpg"/>
+      <itunes:duration>3592</itunes:duration>
+      <itunes:summary>Christian tells a story of how Apollo got started, grew and eventually had to shut down following Reddit's API pricing decision.
+
+Segments
+[00:46] Introduction of Christian
+[01:58] How Christian got into app development
+[03:36] Internship at Apple
+[06:38] The origin of the name for Apollo
+[07:49] Launching v1 of Apollo
+[13:12] Pricing the app
+[17:46] Apollo t-shirts and custom app icons
+[21:38] Adding notifications and being rejected by Apple
+[26:15] Initial reception of Apollo and building a community
+[31:32] Apollo's growth
+[39:39] Challenges with Reddit API
+[41:51] The demise of Apollo
+[47:11] Apollo in metrics
+[54:14] PixelPals
+[56:05] Advice for app developers
+[57:26] Podcast and book recommendations
+
+Show notes
+
+ Christian on Twitter/X: @ChristianSelig
+
+ Pixel Pals Widget Pet Game on Apple App Store
+
+  Apollo app subreddit r/apolloapp
+
+
+Do you love audio podcasts?
+Sign up for Metacast podcast app at https://metacast.app.
+
+Get in touch!
+Send us an email at hello@buildersgonnabuild.com
+Subscribe to newsletter at https://www.buildersgonnabuild.com
+Metacast: Behind the scenes - "build in public" style podcast and newsletter at https://metacastpodcast.com</itunes:summary>
+      <itunes:subtitle>Christian tells a story of how Apollo got started, grew and eventually had to shut down following Reddit's API pricing decision.
+
+Segments
+[00:46] Introduction of Christian
+[01:58] How Christian got into app development
+[03:36] Internship at Apple
+[</itunes:subtitle>
+      <itunes:keywords></itunes:keywords>
+      <itunes:explicit>No</itunes:explicit>
+    </item>
+  </channel>
+</rss>
