@@ -389,7 +389,7 @@ const GET = (exports.GET = {
   */
 
   keywords: function (node) {
-    return node[NS.itunesKeywords]
+    return extractValue(node[NS.itunesKeywords])
   },
 
   /*
@@ -475,11 +475,11 @@ const GET = (exports.GET = {
   },
 
   subtitle: function (node) {
-    return node[NS.itunesSubtitle]
+    return extractValue(node[NS.itunesSubtitle])
   },
 
   summary: function (node) {
-    return node[NS.itunesSummary]
+    return extractValue(node[NS.itunesSummary])
   },
 
   transcript: function (node) {
@@ -594,27 +594,29 @@ const getDefault = (exports.getDefault = function (node, field) {
 
 const CLEAN = (exports.CLEAN = {
   author: function (obj) {
-    return obj
+    return extractValue(obj)
   },
 
-  blocked: function (string) {
-    if (string.toLowerCase == 'yes') {
+  blocked: function (obj) {
+    const string = extractValue(obj)
+    if (string && string.toLowerCase() === 'yes') {
       return true
     } else {
       return false
     }
   },
 
-  complete: function (string) {
-    if (string[0].toLowerCase == 'yes') {
+  complete: function (obj) {
+    const string = extractValue(obj)
+    if (string && string.toLowerCase() === 'yes') {
       return true
     } else {
       return false
     }
   },
 
-  duration: function (arr) {
-    const durationValue = extractValue(arr)
+  duration: function (obj) {
+    const durationValue = extractValue(obj)
     if (!durationValue || durationValue === '') {
       return null
     }

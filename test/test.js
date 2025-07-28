@@ -26,6 +26,7 @@ const newFeedUrlTestFeedPath = path.join(
   testFilesPath,
   'bc-sample-new-feed-url.xml'
 )
+const namespaceTestFeedPath = path.join(testFilesPath, 'namespace-sample.xml')
 
 chai.use(chaiAsPromised)
 
@@ -121,7 +122,7 @@ describe('Getting Podcast Object from Sample Feed', function () {
         'https://metacast.app/builders-gonna-build'
       )
       expect(podcast.meta.language).to.equal('en')
-      expect(podcast.meta.author).to.eql(['Metacast'])
+      expect(podcast.meta.author).to.eql('Metacast')
       expect(podcast.meta.summary).to.equal(
         'Interviews with people who build awesome products, businesses and experiences. Hosted by Metacast co-founders Ilya Bezdelev and Arnab Deka.'
       )
@@ -432,5 +433,100 @@ describe('Checking handling of new-feed-url', function () {
       .toString()
     const podcast = podcastFeedParser.getPodcastFromFeed(sampleFeed)
     expect(podcast.meta.title).to.equal('All Things Chemical')
+  })
+})
+
+describe('Checking namespace attribute handling', function () {
+  const sampleFeed = fs.readFileSync(namespaceTestFeedPath, 'utf8').toString()
+  const podcast = podcastFeedParser.getPodcastFromFeed(sampleFeed)
+
+  describe('Podcast metadata with namespaces', function () {
+    it('should parse podcast meta information correctly', function () {
+      expect(podcast.meta.title).to.equal('Test Podcast with Namespaces')
+      expect(podcast.meta.description).to.equal(
+        'A test podcast for testing namespace handling in podcast feed parser'
+      )
+      expect(podcast.meta.subtitle).to.equal(
+        'Test subtitle with namespace attributes'
+      )
+      expect(podcast.meta.author).to.equal('Test Author')
+      expect(podcast.meta.summary).to.equal(
+        'Test summary with namespace declarations'
+      )
+      expect(podcast.meta.language).to.equal('en-us')
+      expect(podcast.meta.link).to.equal('https://example.com')
+      expect(podcast.meta.imageURL).to.equal('https://example.com/artwork.jpg')
+    })
+
+    it('should handle explicit and complete fields with namespaces', function () {
+      expect(podcast.meta.explicit).to.equal(false)
+      expect(podcast.meta.complete).to.equal(false)
+    })
+
+    it('should parse owner information correctly', function () {
+      expect(podcast.meta.owner).to.eql({
+        name: 'Test Owner',
+        email: 'test@example.com'
+      })
+    })
+
+    it('should parse categories correctly', function () {
+      expect(podcast.meta.categories).to.include('Technology>Software How-To')
+      expect(podcast.meta.categories).to.include('Education>Courses')
+    })
+
+    it('should parse keywords correctly', function () {
+      expect(podcast.meta.keywords).to.equal(
+        'test, podcast, namespace, xml, parser'
+      )
+    })
+  })
+
+  describe('Episode handling with namespaces', function () {
+    it('should have the correct number of episodes', function () {
+      expect(podcast.episodes).to.have.length(3)
+    })
+
+    it('should parse episode with numeric duration correctly', function () {
+      const episode = podcast.episodes.find(
+        (ep) => ep.title === 'Episode 1: Testing with Numeric Duration'
+      )
+      expect(episode).to.not.be.undefined
+      expect(episode.duration).to.equal(1800)
+      expect(episode.explicit).to.equal(false)
+      expect(episode.subtitle).to.equal('Episode subtitle with namespace')
+      expect(episode.keywords).to.equal('test, episode, duration')
+    })
+
+    it('should handle empty duration field gracefully', function () {
+      const episode = podcast.episodes.find(
+        (ep) => ep.title === 'Episode 2: Testing Empty Duration'
+      )
+      expect(episode).to.not.be.undefined
+      expect(episode.duration).to.be.null
+      expect(episode.explicit).to.equal(true)
+      expect(episode.subtitle).to.equal('Testing empty duration field')
+    })
+
+    it('should parse time format duration correctly', function () {
+      const episode = podcast.episodes.find(
+        (ep) => ep.title === 'Episode 3: Testing Time Format Duration'
+      )
+      expect(episode).to.not.be.undefined
+      expect(episode.duration).to.equal(2730) // 45:30 = 45*60 + 30 = 2730 seconds
+      expect(episode.explicit).to.equal(false)
+      expect(episode.subtitle).to.equal('Testing time format duration')
+    })
+
+    it('should parse enclosure information correctly', function () {
+      const episode1 = podcast.episodes.find(
+        (ep) => ep.title === 'Episode 1: Testing with Numeric Duration'
+      )
+      expect(episode1.enclosure).to.eql({
+        length: '25000000',
+        type: 'audio/mpeg',
+        url: 'https://example.com/episode1.mp3'
+      })
+    })
   })
 })
