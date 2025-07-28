@@ -28,7 +28,7 @@ const newFeedUrlTestFeedPath = path.join(
 )
 const namespaceTestFeedPath = path.join(testFilesPath, 'namespace-sample.xml')
 
-chai.use(chaiAsPromised)
+chai.use(chaiAsPromised.default || chaiAsPromised)
 
 describe('Reading files', function () {
   it('should read the file', function () {

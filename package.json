@@ -30,13 +30,13 @@
   "dependencies": {
     "abort-controller": "^3.0.0",
     "isomorphic-fetch": "^3.0.0",
-    "npm": "^6.4.1",
-    "xml2js": "^0.4.19"
+    "npm": "^11.5.1",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
-    "expect": "^23.6.0",
-    "mocha": "^5.2.0"
+    "chai": "^5.2.1",
+    "chai-as-promised": "^8.0.1",
+    "expect": "^30.0.5",
+    "mocha": "^11.7.1"
   }
 }
