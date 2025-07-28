@@ -389,7 +389,7 @@ const GET = (exports.GET = {
   */
 
   keywords: function (node) {
-    return node[NS.itunesKeywords]
+    return extractValue(node[NS.itunesKeywords])
   },
 
   /*
@@ -475,11 +475,11 @@ const GET = (exports.GET = {
   },
 
   subtitle: function (node) {
-    return node[NS.itunesSubtitle]
+    return extractValue(node[NS.itunesSubtitle])
   },
 
   summary: function (node) {
-    return node[NS.itunesSummary]
+    return extractValue(node[NS.itunesSummary])
   },
 
   transcript: function (node) {
@@ -594,28 +594,35 @@ const getDefault = (exports.getDefault = function (node, field) {
 
 const CLEAN = (exports.CLEAN = {
   author: function (obj) {
-    return obj
+    return extractValue(obj)
   },
 
-  blocked: function (string) {
-    if (string.toLowerCase == 'yes') {
+  blocked: function (obj) {
+    const string = extractValue(obj)
+    if (string && string.toLowerCase() === 'yes') {
       return true
     } else {
       return false
     }
   },
 
-  complete: function (string) {
-    if (string[0].toLowerCase == 'yes') {
+  complete: function (obj) {
+    const string = extractValue(obj)
+    if (string && string.toLowerCase() === 'yes') {
       return true
     } else {
       return false
     }
   },
 
-  duration: function (arr) {
+  duration: function (obj) {
+    const durationValue = extractValue(obj)
+    if (!durationValue || durationValue === '') {
+      return null
+    }
+
     // gives duration in seconds
-    let times = arr[0].split(':'),
+    let times = durationValue.split(':'),
       sum = 0,
       mul = 1
 
@@ -635,10 +642,17 @@ const CLEAN = (exports.CLEAN = {
     }
   },
 
-  explicit: function (string) {
-    if (['yes', 'explicit', 'true'].indexOf(string[0].toLowerCase()) >= 0) {
+  explicit: function (inputArray) {
+    const value = extractValue(inputArray)
+    if (!value) {
+      return undefined
+    }
+
+    const string = value.toLowerCase()
+
+    if (['yes', 'explicit', 'true'].indexOf(string) >= 0) {
       return true
-    } else if (['clean', 'no', 'false'].indexOf(string[0].toLowerCase()) >= 0) {
+    } else if (['clean', 'no', 'false'].indexOf(string) >= 0) {
       return false
     } else {
       return undefined
@@ -662,6 +676,17 @@ const CLEAN = (exports.CLEAN = {
 
     return ownerObject
   }
+})
+
+const extractValue = (exports.extractValue = function (inputArray) {
+  // Helper function to extract values that might have namespace attributes
+  // Handles both simple strings and objects with _ property (namespace format)
+  if (!inputArray || !Array.isArray(inputArray) || inputArray.length === 0) {
+    return undefined
+  }
+
+  const firstItem = inputArray[0]
+  return typeof firstItem === 'object' ? firstItem._ : firstItem
 })
 
 const cleanDefault = (exports.cleanDefault = function (node) {

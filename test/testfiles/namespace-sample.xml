@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0">
+  <channel xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>Test Podcast with Namespaces</title>
+    <description>A test podcast for testing namespace handling in podcast feed parser</description>
+    <link>https://example.com</link>
+    <copyright>2023-2025 Test Company</copyright>
+    <language>en-us</language>
+    <itunes:image href="https://example.com/artwork.jpg" />
+    <itunes:subtitle xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">Test subtitle with namespace attributes</itunes:subtitle>
+    <itunes:author xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">Test Author</itunes:author>
+    <itunes:summary xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">Test summary with namespace declarations</itunes:summary>
+    <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="https://example.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <itunes:owner xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+      <itunes:name>Test Owner</itunes:name>
+      <itunes:email>test@example.com</itunes:email>
+    </itunes:owner>
+    <itunes:category xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" text="Technology">
+      <itunes:category text="Software How-To"/>
+    </itunes:category>
+    <itunes:category xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" text="Education">
+      <itunes:category text="Courses"/>
+    </itunes:category>
+    <itunes:explicit xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">no</itunes:explicit>
+    <itunes:complete xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">no</itunes:complete>
+    <image>
+      <title>Test Podcast with Namespaces</title>
+      <url>https://example.com/artwork.jpg</url>
+      <link>https://example.com</link>
+      <width>144</width>
+      <height>144</height>
+    </image>
+    <itunes:keywords xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">test, podcast, namespace, xml, parser</itunes:keywords>
+    <media:copyright xmlns:media="http://search.yahoo.com/mrss/">2023-2025 Test Company</media:copyright>
+    <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://example.com/thumbnail.jpg"/>
+    <media:category xmlns:media="http://search.yahoo.com/mrss/" scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology/Software How-To</media:category>
+
+    <item>
+      <title>Episode 1: Testing with Numeric Duration</title>
+      <link>https://example.com/episode1</link>
+      <description>This episode tests numeric duration handling and namespace attributes</description>
+      <pubDate>Fri, 25 Jan 2024 10:00:00 PST</pubDate>
+      <guid isPermaLink="false">ep-001</guid>
+      <itunes:subtitle xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">Episode subtitle with namespace</itunes:subtitle>
+      <itunes:summary>Episode summary with namespace declaration</itunes:summary>
+      <itunes:author xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">Test Author</itunes:author>
+      <itunes:explicit xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">clean</itunes:explicit>
+      <itunes:duration xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">1800</itunes:duration>
+      <itunes:keywords xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">test, episode, duration</itunes:keywords>
+      <itunes:image href="https://example.com/episode1.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://example.com/episode1.mp3" fileSize="25000000" type="audio/mpeg"/>
+      <enclosure url="https://example.com/episode1.mp3" length="25000000" type="audio/mpeg"/>
+    </item>
+    
+    <item>
+      <title>Episode 2: Testing Empty Duration</title>
+      <link>https://example.com/episode2</link>
+      <description>This episode tests empty duration field handling</description>
+      <pubDate>Thu, 24 Jan 2024 10:00:00 PST</pubDate>
+      <guid isPermaLink="false">ep-002</guid>
+      <itunes:subtitle xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">Testing empty duration field</itunes:subtitle>
+      <itunes:summary>Episode with empty duration to test parser robustness</itunes:summary>
+      <itunes:author xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">Test Author</itunes:author>
+      <itunes:explicit xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">yes</itunes:explicit>
+      <itunes:duration xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"></itunes:duration>
+      <itunes:keywords xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">test, empty, duration</itunes:keywords>
+      <itunes:image href="https://example.com/episode2.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://example.com/episode2.mp3" fileSize="30000000" type="audio/mpeg"/>
+      <enclosure url="https://example.com/episode2.mp3" length="30000000" type="audio/mpeg"/>
+    </item>
+    
+    <item>
+      <title>Episode 3: Testing Time Format Duration</title>
+      <link>https://example.com/episode3</link>
+      <description>This episode tests time format duration like HH:MM:SS</description>
+      <pubDate>Wed, 23 Jan 2024 10:00:00 PST</pubDate>
+      <guid isPermaLink="false">ep-003</guid>
+      <itunes:subtitle xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">Testing time format duration</itunes:subtitle>
+      <itunes:summary>Episode with time format duration to test conversion</itunes:summary>
+      <itunes:author xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">Test Author</itunes:author>
+      <itunes:explicit xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">false</itunes:explicit>
+      <itunes:duration xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">45:30</itunes:duration>
+      <itunes:keywords xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">test, time, format</itunes:keywords>
+      <itunes:image href="https://example.com/episode3.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://example.com/episode3.mp3" fileSize="40000000" type="audio/mpeg"/>
+      <enclosure url="https://example.com/episode3.mp3" length="40000000" type="audio/mpeg"/>
+    </item>
+
+  </channel>
+</rss>
