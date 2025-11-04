@@ -134,6 +134,11 @@ describe('Getting Podcast Object from Sample Feed', function () {
       expect(podcast.meta.complete).to.equal(false)
       expect(podcast.meta.blocked).to.be.undefined
     })
+    it('should have feedSubscriptionHubUrl', function () {
+      expect(podcast.meta.feedSubscriptionHubUrl).to.equal(
+        'https://pubsubhubbub.appspot.com/'
+      )
+    })
   })
 
   describe('Checking Podcast Episode Information', function () {
