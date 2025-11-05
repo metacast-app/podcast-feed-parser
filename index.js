@@ -15,6 +15,7 @@ const ERRORS = (exports.ERRORS = {
 ============================================
 */
 const NS = (rssFeedNamespaces = {
+  atomLink: 'atom:link',
   itunesAuthor: 'itunes:author',
   itunesBlock: 'itunes:block',
   itunesCategory: 'itunes:category',
@@ -59,6 +60,7 @@ const fieldsMeta = [
   'docs',
   'editor',
   'explicit',
+  'feedSubscriptionHubUrl',
   'funding',
   'generator',
   'guid',
@@ -296,6 +298,21 @@ const GET = (exports.GET = {
 
   explicit: function (node) {
     return node[NS.itunesExplicit]
+  },
+
+  feedSubscriptionHubUrl: function (node) {
+    const atomLinks = node[NS.atomLink]
+    if (!atomLinks) {
+      return undefined
+    }
+
+    const links = Array.isArray(atomLinks) ? atomLinks : [atomLinks]
+    for (const link of links) {
+      if (link && link['$'] && link['$'].rel === 'hub' && link['$'].href) {
+        return link['$'].href
+      }
+    }
+    return undefined
   },
 
   funding: function (node) {
