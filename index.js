@@ -312,6 +312,7 @@ const GET = (exports.GET = {
         return link['$'].href
       }
     }
+    return undefined
   },
 
   funding: function (node) {
